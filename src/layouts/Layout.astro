@@ -6,7 +6,7 @@ interface Props {
 const { title } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es-ar">
   <head>
     <meta charset="UTF-8" />
@@ -45,8 +45,15 @@ const { title } = Astro.props;
     background-color: rgb(18, 18, 18);
   }
   code {
-    font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-      DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+    font-family:
+      Menlo,
+      Monaco,
+      Lucida Console,
+      Liberation Mono,
+      DejaVu Sans Mono,
+      Bitstream Vera Sans Mono,
+      Courier New,
+      monospace;
   }
 
   .pulse::before {
@@ -72,6 +79,19 @@ const { title } = Astro.props;
     }
     to {
       opacity: 0.4;
+    }
+  }
+
+  .rotate-inf {
+    animation: rotate 20s infinite linear alternate;
+  }
+
+  @keyframes rotate {
+    from {
+      transform: rotate(-45deg);
+    }
+    to {
+      transform: rotate(-20deg);
     }
   }
 </style>
