@@ -28,26 +28,50 @@ const { title } = Astro.props;
 </html>
 <style is:global>
   * {
-    margin: 0px;
-    padding: 0px;
     box-sizing: border-box;
   }
 
   :root {
-    --accent: 124, 58, 237;
+    --accent: 255, 0, 0;
     --accent-gradient: linear-gradient(
-      45deg,
+      90deg,
       rgb(var(--accent)),
-      #da62c4 30%,
+      #3498db 30%,
       white 60%
     );
   }
   html {
     font-family: system-ui, sans-serif;
-    background-color: #f6f6f6;
+    background-color: rgb(18, 18, 18);
   }
   code {
     font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
       DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+  }
+
+  .pulse::before {
+    animation: pulse 7s infinite;
+  }
+  .pulse::after {
+    animation: pulse 7s infinite;
+    animation-delay: 3.5s;
+  }
+
+  .bg-gradient {
+    background: url("/degradado.png");
+    background-position: 0px 0px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.1;
+    filter: blur(5px);
+  }
+
+  @keyframes pulse {
+    from {
+      opacity: 0.2;
+    }
+    to {
+      opacity: 0.4;
+    }
   }
 </style>

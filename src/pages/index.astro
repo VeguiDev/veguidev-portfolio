@@ -1,33 +1,101 @@
 ---
-import DiscordProfile from "../components/DiscordProfile.astro";
+import NavBar from "../components/NavBar";
+import PresentationCard from "../components/PresentationCard.astro";
 import Layout from "../layouts/Layout.astro";
+import {
+  Info,
+  GraduationCap,
+  FlaskConical,
+  ChevronRight,
+  Sparkles,
+  Menu,
+} from "lucide-astro";
 ---
 
 <Layout title="VeguiDev - Desarrollador de Software">
   <main class="text-white">
-    <section
-      class="w-full min-h-screen relative flex flex-col items-center pt-12"
-    >
-      <div class="absolute left-0 top-0 w-full h-screen bg-neutral-950 -z-10">
-      </div>
-      <article class="p-2 text-center text-4xl my-12">
+    <NavBar client:load />
+    <section>
+      <article
+        class="flex flex-col text-xl justify-center items-center my-12 mx-4"
+      >
+        <div
+          class="rounded-full pulse flex justify-center items-center mb-5 w-32 h-32 border-2 border-neutral-700 relative before:absolute before:w-48 before:h-48 before:opacity-70 before:rounded-full before:border before:border-neutral-700 after:absolute after:w-96 after:h-96 after:opacity-20 after:rounded-full after:border after:border-neutral-700/80"
+        >
+          <img
+            src="./logo-shadow-discord.png"
+            class="w-32 rounded-full"
+            alt="VeguiDev profile discord"
+          />
+        </div>
+
         <h2 class="font-bold">Juan Manuel Menta</h2>
-        <p class="text-2xl">Desarrollador de Software</p>
+        <h3>veguidev</h3>
       </article>
-      <section class="mt-12 mx-4">
-        <DiscordProfile />
+      <div class="relative my-5 mx-4">
+        <!-- Divider -->
+        <hr class="w-full border-neutral-700" />
+        <div class="absolute w-full h-96 top-0 bg-gradient"></div>
+      </div>
+
+      <!-- Articles -->
+
+      <section class="grid md:grid-cols-2 gap-5 w-[95%] mx-auto mb-5">
+        <PresentationCard icon={Info} title="Información" link="/sobre-mi">
+          Soy Juan Manuel Menta, desarrollador de software con experiencia en
+          desarrollo web, creación de aplicaciones de escritorio multiplataforma
+          y programación de mods para servidores de Minecraft. Puedo diseñar una
+          página web profesional para tu negocio, crear herramientas internas
+          que optimicen el trabajo de tus empleados o desarrollar mods y plugins
+          que mejoren la experiencia en tu servidor de Minecraft.
+        </PresentationCard>
+        <PresentationCard
+          icon={GraduationCap}
+          title="Formación"
+          link="/formacion"
+        >
+          Soy técnico en Multimedios, egresado del Instituto San Antonio de
+          Padua, donde adquirí una sólida base en comunicación audiovisual,
+          diseño y tecnología. Actualmente, continúo mi formación académica
+          cursando la Licenciatura en Gestión de los Sistemas de la Información
+          en la UADE.
+        </PresentationCard>
+        <PresentationCard
+          icon={FlaskConical}
+          title="Experiencia"
+          link="/sobre-mi"
+        >
+          Tengo experiencia en desarrollo web, aplicaciones de escritorio
+          multiplataforma y desarrollo de mods/plugins para servidores de
+          Minecraft, usados por cientos de personas y creadores de contenido.
+          Desde hace un año, formo parte del equipo de Farfania 2 como
+          desarrollador de mods, plugins, sistemas de backend, bots de Discord y
+          sistemas de integración con APIs.
+        </PresentationCard>
+
+        <PresentationCard
+          icon={Sparkles}
+          title="Habilidades"
+          link="/sobre-mi#habilidades"
+        >
+          Me especializo en la creación de mods y plugins para Minecraft,
+          desarrollo web y de aplicaciones de escritorio, así como en la
+          integración de sistemas backend y APIs. Además, cuento con experiencia
+          en la automatización y gestión de comunidades mediante bots de
+          Discord.
+        </PresentationCard>
       </section>
     </section>
   </main>
-</Layout>
 
-<style>
-  main {
-    min-height: 100vh;
-  }
-  h1 {
-    font-size: 3rem;
-    font-weight: 800;
-    margin: 0;
-  }
-</style>
+  <style>
+    main {
+      min-height: 100vh;
+    }
+    h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin: 0;
+    }
+  </style>
+</Layout>

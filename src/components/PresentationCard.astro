@@ -1,0 +1,34 @@
+---
+import { ChevronRight } from "lucide-astro";
+
+interface Props {
+  icon: any;
+  title: string;
+  link?: string;
+}
+
+const { icon: Icon, title, link } = Astro.props;
+---
+
+<article
+  class="bg-neutral-900/20 border border-neutral-700 backdrop-blur p-6 flex flex-col rounded-lg"
+>
+  <section
+    class="bg-neutral-900 text-blue translate-x-2 translate-y-2 flex justify-center items-center w-12 h-12 border rounded-full border-neutral-700 relative before:absolute before:w-16 before:h-16 before:opacity-50 before:rounded-full before:border before:border-neutral-700 before:z-0"
+  >
+    <Icon />
+  </section>
+  <section class="mt-12 flex-1 flex flex-col items-start">
+    <h2 class="font-bold mb-2 uppercase">{title}</h2>
+    <p class="mt-2 mb-4">
+      <slot />
+    </p>
+    <a
+      href={link}
+      class="inline-flex gap-1 items-center mt-auto bg-blue/40 hover:bg-blue/80 duration-200 transition-colors text-white font-medium py-2 px-4 rounded"
+    >
+      {title}
+      <ChevronRight />
+    </a>
+  </section>
+</article>
