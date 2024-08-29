@@ -6,12 +6,12 @@ export default function NavBar() {
 
   return (
     <header className="bg-neutral-900 md:bg-neutral-900/70 md:backdrop-blur p-6 z-50 sticky top-0 left-0 flex items-center">
-      VEGUIDEV
+      <img src="/logo.png" alt="VeguiDev logo" className="w-12 h-12" />
       <button onClick={() => setIsOpen(!isOpen)} className="ml-auto md:hidden">
         {isOpen ? <XIcon /> : <MenuIcon />}
       </button>
       <nav
-        className={`fixed top-0 left-0 h-full w-full bg-neutral-900 p-6 md:p-0 md:ml-12 transform md:bg-transparent transition-transform duration-300 flex flex-col md:relative md:w-full md:h-auto ${
+        className={`fixed top-0 left-0 h-full w-full bg-neutral-900 p-6 md:p-0 md:ml-10 transform md:bg-transparent transition-transform duration-300 flex flex-col md:relative md:w-full md:h-auto ${
           isOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"
         }`}
       >

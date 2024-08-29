@@ -1,0 +1,35 @@
+---
+import { ChevronRight } from "lucide-astro";
+import ProyectPill from "./ProyectPill.astro";
+
+interface Props {
+  image: string;
+  title: string;
+  link?: string;
+  pills: { text: string; color: string }[];
+}
+
+const { image, title, link, pills } = Astro.props;
+---
+
+<article
+  class="bg-neutral-900/20 border border-neutral-700 backdrop-blur flex flex-col rounded-lg"
+>
+  <section class="bg-neutral-900 rounded-t-lg w-full overflow-hidden text-blue">
+    <img src={image} class="w-full" alt={title + " banner"} />
+  </section>
+  <section class="flex-1 flex flex-col p-6 items-start">
+    <h2 class="font-bold mb-2 uppercase">{title}</h2>
+    <p class="mt-2 mb-4">
+      <slot />
+    </p>
+    <div class="flex flex-wrap gap-2">
+      {
+        pills &&
+          pills.map((pill) => (
+            <ProyectPill text={pill.text} color={pill.color} />
+          ))
+      }
+    </div>
+  </section>
+</article>
