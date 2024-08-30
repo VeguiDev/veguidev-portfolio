@@ -1,4 +1,10 @@
-import { MenuIcon, XIcon, SparklesIcon, HomeIcon } from "lucide-react";
+import {
+  MenuIcon,
+  XIcon,
+  SparklesIcon,
+  HomeIcon,
+  ArrowDownIcon,
+} from "lucide-react";
 import { useEffect, useState } from "react";
 
 export default function NavBar() {
@@ -99,9 +105,10 @@ export default function NavBar() {
           <li>
             <a
               href="/CV - Juan Manuel Menta.pdf"
-              className="p-2 w-full inline-block bg-blue-400 hover:bg-blue-300/10 rounded"
+              className="p-2 pl-4 flex gap-3 w-full hover:bg-white/10 rounded"
+              target="_blank"
             >
-              CV
+              CV <ArrowDownIcon />
             </a>
           </li>
         </ul>
