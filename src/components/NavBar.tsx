@@ -72,7 +72,7 @@ export default function NavBar() {
               >
                 Sobre Mi
               </a>
-              <section className="absolute transition-all duration-200 -translate-y-1/2 scale-0 opacity-0 group-hover:translate-y-0 group-hover:scale-100 group-hover:opacity-100 mt-2 -left-6 shadow-lg bg-neutral-900/70 px-4 p-2 rounded">
+              <section className="absolute transition-all duration-200 md:-translate-y-1/2 md:scale-0 md:opacity-0 group-hover:translate-y-0 group-hover:scale-100 group-hover:opacity-100 mt-2 md:-left-6 md:shadow-lg md:bg-neutral-900/70 px-4 p-2 rounded max-md:relative">
                 <a
                   href="/sobre-mi#habilidades"
                   className="p-2 w-full inline-block hover:bg-white/10 rounded"
