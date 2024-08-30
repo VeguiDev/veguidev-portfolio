@@ -65,20 +65,28 @@ export default function NavBar() {
             </a>
           </li>
           <li>
-            <a
-              href="/sobre-mi#habilidades"
-              className="p-2 w-full inline-block hover:bg-white/10 rounded"
-            >
-              Habilidades
-            </a>
-          </li>
-          <li>
-            <a
-              href="/sobre-mi"
-              className="p-2 w-full inline-block hover:bg-white/10 rounded"
-            >
-              Sobre Mi
-            </a>
+            <div className="group relative">
+              <a
+                href="/sobre-mi"
+                className="p-2 w-full inline-block hover:bg-white/10 rounded"
+              >
+                Sobre Mi
+              </a>
+              <section className="absolute transition-all duration-200 -translate-y-1/2 scale-0 opacity-0 group-hover:translate-y-0 group-hover:scale-100 group-hover:opacity-100 mt-2 -left-6 shadow-lg bg-neutral-900/70 px-4 p-2 rounded">
+                <a
+                  href="/sobre-mi#habilidades"
+                  className="p-2 w-full inline-block hover:bg-white/10 rounded"
+                >
+                  Habilidades
+                </a>
+                <a
+                  href="/sobre-mi#formacion"
+                  className="p-2 w-full inline-block hover:bg-white/10 rounded"
+                >
+                  Formación
+                </a>
+              </section>
+            </div>
           </li>
           <li>
             <a
