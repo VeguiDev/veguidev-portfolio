@@ -96,6 +96,14 @@ export default function NavBar() {
               Contacto
             </a>
           </li>
+          <li>
+            <a
+              href="/CV - Juan Manuel Menta.pdf"
+              className="p-2 w-full inline-block bg-blue-400 hover:bg-blue-300/10 rounded"
+            >
+              CV
+            </a>
+          </li>
         </ul>
       </nav>
     </header>
