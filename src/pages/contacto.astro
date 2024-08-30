@@ -1,0 +1,190 @@
+---
+import NavBar from "../components/NavBar";
+import ProyectCard from "../components/ProyectCard.astro";
+import Layout from "../layouts/Layout.astro";
+import {
+  Info,
+  GraduationCap,
+  FlaskConical,
+  ChevronRight,
+  Sparkles,
+  Menu,
+} from "lucide-astro";
+---
+
+<Layout title="VeguiDev - Desarrollador de Software">
+  <main class="text-white">
+    <NavBar client:load />
+    <section>
+      <h2 class="text-4xl font-bold text-center my-12">Contacto</h2>
+      <div class="relative my-12 mx-4">
+        <!-- Divider -->
+        <hr class="w-full border-neutral-700" />
+        <div class="absolute w-full h-96 top-0 -z-10 bg-gradient"></div>
+      </div>
+    </section>
+
+    <section>
+      <form
+        class="w-full md:w-1/3 mx-auto p-6 flex flex-col gap-5 bg-neutral-800/20 backdrop-blur rounded my-12 px-12"
+      >
+        <div class="flex flex-col">
+          <label for="email" class="select-none mb-1">Email</label>
+          <input
+            type="email"
+            class="p-1 text-white px-2 rounded hover:bg-neutral-500 focus:outline-none shadow focus:outline focus:outline-blue-brand/20 transition-all duration-150 bg-neutral-600"
+            placeholder="Correo . . ."
+            id="email"
+            required
+          />
+        </div>
+        <div class="flex flex-col">
+          <label for="subject" class="select-none mb-1">Asunto</label>
+          <input
+            type="text"
+            class="p-1 text-white px-2 rounded hover:bg-neutral-500 focus:outline-none shadow focus:outline focus:outline-blue-brand/20 transition-all duration-150 bg-neutral-600"
+            placeholder="Asunto . . ."
+            id="subject"
+            required
+          />
+        </div>
+        <div class="flex flex-col">
+          <label for="msg" class="select-none mb-1">Mensaje</label>
+          <textarea
+            class="p-1 text-white px-2 rounded hover:bg-neutral-500 focus:outline-none shadow focus:outline focus:outline-blue-brand/20 transition-all duration-150 bg-neutral-600 resize-none"
+            placeholder="Mensaje . . ."
+            rows="5"
+            required
+            id="msg"></textarea>
+        </div>
+        <button
+          class="bg-blue-brand text-white p-2 rounded hover:bg-blue-brand/80 transition-all duration-150"
+          type="submit"
+          id="submit"
+        >
+          Enviar
+        </button>
+      </form>
+    </section>
+
+    <footer class="p-6 py-12 flex items-center bg-neutral-900 w-full">
+      <!-- <section class="grid grid-cols-2 text-center gap-5">
+        <section>
+          <h2 class="text-xl font-bold mb-2">REDES</h2>
+          <ul>
+            <li>
+              <a
+                href="https://x.com/VeguiDev"
+                target="_blank"
+                class="hover:underline"
+                rel="noopener"
+              >
+                Twitter
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/VeguiDev"
+                target="_blank"
+                class="hover:underline"
+                rel="noopener"
+              >
+                Github
+              </a>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold mb-2">CONTENIDOS</h2>
+          <ul>
+            <li>
+              <a href="/sobre-mi" class="hover:underline"> Sobre Mi </a>
+            </li>
+            <li>
+              <a href="/proyectos" class="hover:underline"> Proyectos </a>
+            </li>
+            <li>
+              <a href="/sobre-mi#contacto" class="hover:underline">
+                Contacto
+              </a>
+            </li>
+          </ul>
+        </section>
+      </section> -->
+      <section class="text-center w-full text-sm text-neutral-600">
+        TODOS LOS DERECHOS RESERVADOS © 2021 by VeguiDev
+      </section>
+    </footer>
+  </main>
+
+  <style>
+    main {
+      min-height: 100vh;
+    }
+    h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin: 0;
+    }
+  </style>
+
+  <script>
+    const form = document.querySelector("form") as HTMLFormElement;
+
+    const msg = document.querySelector("#msg") as HTMLInputElement;
+
+    form.addEventListener("submit", async (e) => {
+      if (!form.checkValidity()) return;
+
+      e.preventDefault();
+      const email = document.querySelector("#email") as HTMLInputElement;
+      const subject = document.querySelector("#subject") as HTMLInputElement;
+      const btn = document.querySelector("#submit") as HTMLButtonElement;
+
+      const emailValue = email.value.trim();
+      const subjectValue = subject.value.trim();
+      const msgValue = msg.value.trim();
+
+      const data = {
+        from: emailValue,
+        subject: subjectValue,
+        message: msgValue,
+      };
+
+      btn.disabled = true;
+      btn.innerHTML = "Enviando...";
+
+      try {
+        const response = await fetch("/api/contact", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        });
+
+        if (response.ok) {
+          alert("Mensaje enviado correctamente");
+          form.reset();
+        } else {
+          alert("Error al enviar el mensaje");
+        }
+      } catch (error) {
+        alert("Error al enviar el mensaje");
+      } finally {
+        btn.disabled = false;
+        btn.innerHTML = "Enviar";
+      }
+    });
+
+    const search = new URLSearchParams(window.location.search);
+
+    if (search.has("m")) {
+      try {
+        const msgQ = atob(search.get("m") as string);
+
+        if (msg) msg.value = msgQ;
+      } catch (e) {}
+    }
+  </script>
+</Layout>
