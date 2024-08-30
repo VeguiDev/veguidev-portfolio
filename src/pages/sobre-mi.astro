@@ -16,23 +16,9 @@ import {
 <Layout title="VeguiDev - Sobre Mi">
   <main class="text-white">
     <NavBar client:load />
-    <section class="grid relative md:grid-cols-2">
+    <section class="relative flex justify-center">
       <span class="w-full h-full absolute right-0 top-0 degradado2"> </span>
-      <article class="flex flex-col text-xl items-center my-48 mx-4">
-        <div
-          class="rounded-full pulse flex justify-center items-center mb-5 w-40 h-40 border-2 border-neutral-700 relative before:absolute before:w-48 before:h-48 before:opacity-70 before:rounded-full before:border before:border-neutral-700 after:absolute after:w-96 after:h-96 after:opacity-20 after:rounded-full after:border after:border-neutral-700/80"
-        >
-          <img
-            src="./foto.png"
-            class="w-40 h-40 object-cover rounded-full"
-            alt="Juan Manuel Menta foto"
-          />
-        </div>
-        <h3 class="font-bold mt-2">Juan Manuel Menta</h3>
-        <h3>veguidev</h3>
-        <h2 class="text-2xl font-black mb-2">Desarrollador de Software</h2>
-      </article>
-      <section class="mt-20 mb-20">
+      <section class="mt-20 mb-20 px-5 md:px-0">
         <DiscordProfile />
       </section>
     </section>
