@@ -1,6 +1,7 @@
 ---
 import AbilityCard, { type Ability } from "../components/AbilityCard.astro";
 import DiscordProfile from "../components/DiscordProfile.astro";
+import Footer from "../components/Footer.astro";
 import NavBar from "../components/NavBar";
 import YearProgressBar from "../components/YearProgressBar.astro";
 import Layout from "../layouts/Layout.astro";
@@ -216,54 +217,7 @@ const abilities: Ability[] = [
         </article>
       </section>
     </section>
-    <footer class="p-6 py-12 flex items-center bg-neutral-900 w-full">
-      <!-- <section class="grid grid-cols-2 text-center gap-5">
-        <section>
-          <h2 class="text-xl font-bold mb-2">REDES</h2>
-          <ul>
-            <li>
-              <a
-                href="https://x.com/VeguiDev"
-                target="_blank"
-                class="hover:underline"
-                rel="noopener"
-              >
-                Twitter
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://github.com/VeguiDev"
-                target="_blank"
-                class="hover:underline"
-                rel="noopener"
-              >
-                Github
-              </a>
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h2 class="text-xl font-bold mb-2">CONTENIDOS</h2>
-          <ul>
-            <li>
-              <a href="/sobre-mi" class="hover:underline"> Sobre Mi </a>
-            </li>
-            <li>
-              <a href="/proyectos" class="hover:underline"> Proyectos </a>
-            </li>
-            <li>
-              <a href="/sobre-mi#contacto" class="hover:underline">
-                Contacto
-              </a>
-            </li>
-          </ul>
-        </section>
-      </section> -->
-      <section class="text-center w-full text-sm text-neutral-600">
-        TODOS LOS DERECHOS RESERVADOS © 2021 by VeguiDev
-      </section>
-    </footer>
+    <Footer />
   </main>
 
   <style>
