@@ -37,7 +37,7 @@ export default function NavBar() {
         {isOpen ? <XIcon /> : <MenuIcon />}
       </button>
       <nav
-        className={`fixed top-0 left-0 h-screen w-full bg-neutral-900/20 p-6 md:p-0 md:ml-10 transform md:bg-transparent transition-transform duration-300 flex flex-col md:relative md:w-full md:h-auto ${
+        className={`fixed top-0 left-0 h-screen w-full bg-neutral-900 p-6 md:p-0 md:ml-10 transform md:bg-transparent transition-transform duration-300 flex flex-col md:relative md:w-full md:h-auto ${
           isOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"
         }`}
       >
