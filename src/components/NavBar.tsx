@@ -4,8 +4,32 @@ import { useEffect, useState } from "react";
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
 
+  const [onTop, setOnTop] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setOnTop(false);
+      } else {
+        setOnTop(true);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <header className="bg-neutral-900 md:bg-neutral-900/70 md:backdrop-blur p-6 z-50 sticky top-0 left-0 flex items-center">
+    <header
+      className={` p-6 z-50 sticky top-0 left-0 flex items-center ${
+        onTop
+          ? "bg-transparent"
+          : "bg-neutral-900 md:bg-neutral-900/70 md:backdrop-blur"
+      }`}
+    >
       <a href="/">
         <img src="/logo.png" alt="VeguiDev logo" className="w-12 h-12" />
       </a>
@@ -13,7 +37,7 @@ export default function NavBar() {
         {isOpen ? <XIcon /> : <MenuIcon />}
       </button>
       <nav
-        className={`fixed top-0 left-0 h-screen w-full bg-neutral-900 p-6 md:p-0 md:ml-10 transform md:bg-transparent transition-transform duration-300 flex flex-col md:relative md:w-full md:h-auto ${
+        className={`fixed top-0 left-0 h-screen w-full bg-neutral-900/20 p-6 md:p-0 md:ml-10 transform md:bg-transparent transition-transform duration-300 flex flex-col md:relative md:w-full md:h-auto ${
           isOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"
         }`}
       >
