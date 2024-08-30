@@ -6,7 +6,9 @@ export default function NavBar() {
 
   return (
     <header className="bg-neutral-900 md:bg-neutral-900/70 md:backdrop-blur p-6 z-50 sticky top-0 left-0 flex items-center">
-      <img src="/logo.png" alt="VeguiDev logo" className="w-12 h-12" />
+      <a href="/">
+        <img src="/logo.png" alt="VeguiDev logo" className="w-12 h-12" />
+      </a>
       <button onClick={() => setIsOpen(!isOpen)} className="ml-auto md:hidden">
         {isOpen ? <XIcon /> : <MenuIcon />}
       </button>
