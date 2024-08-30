@@ -2,6 +2,7 @@
 import AbilityCard, { type Ability } from "../components/AbilityCard.astro";
 import DiscordProfile from "../components/DiscordProfile.astro";
 import NavBar from "../components/NavBar";
+import YearProgressBar from "../components/YearProgressBar.astro";
 import Layout from "../layouts/Layout.astro";
 
 const abilities: Ability[] = [
@@ -157,6 +158,62 @@ const abilities: Ability[] = [
         class="mt-12 w-auto items-center grid grid-cols-1 gap-5 md:px-52"
       >
         {abilities.map((ab) => <AbilityCard {...ab} />)}
+      </section>
+    </section>
+    <section class="mb-12 mt-12">
+      <h2 class="text-3xl font-bold text-center" id="habilidades">Formación</h2>
+      <div class="relative mt-5 mb-12 mx-4">
+        <!-- Divider -->
+
+        <div class="absolute w-full h-96 top-0 -z-10 bg-gradient"></div>
+      </div>
+      <section
+        class="mt-12 w-auto items-center grid grid-cols-1 gap-5 md:px-52"
+      >
+        <article class="bg-neutral-700/20 p-5 rounded">
+          <h3 class="text-sm font-bold mb-2">Actual</h3>
+          <section class="mt-4">
+            <h4 class="text-xl font-medium mb-6">
+              Licenciatura en Gestión de la Tecnologia de la Información -
+              <a
+                href="https://www.uade.edu.ar/facultad-de-ingenieria-y-ciencias-exactas/licenciatura-en-gestion-de-tecnologia-de-la-informacion/"
+                target="_blank"
+                rel="noopener"
+                class="hover:underline text-blue-brand"
+              >
+                (UADE)
+              </a>
+            </h4>
+            <YearProgressBar year={0} total={4} />
+            <small
+              class="inline-block text-sm text-neutral-500 select-none mt-2 max-md:text-center max-md:w-full"
+            >
+              Progreso actual de la carrera
+            </small>
+          </section>
+        </article>
+        <article class="bg-neutral-700/20 p-5 rounded">
+          <h3 class="text-sm font-bold mb-2">Completada</h3>
+          <section class="mt-4">
+            <h4 class="text-xl font-medium mb-6">
+              Tecnicatura en Multimedios & Secundaria -
+              <a
+                href="https://ipadua.edu.ar/multimedios.html"
+                target="_blank"
+                rel="noopener"
+                class="hover:underline text-blue-brand"
+              >
+                (ISAP)
+              </a>
+            </h4>
+            <YearProgressBar year={7} total={7} />
+            <small
+              class="inline-block text-sm text-neutral-500 select-none mt-2 max-md:text-center max-md:w-full"
+            >
+              Progreso total de la carrera
+            </small>
+          </section>
+        </article>
       </section>
     </section>
     <footer class="p-6 py-12 flex items-center bg-neutral-900 w-full">
