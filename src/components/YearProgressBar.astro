@@ -5,6 +5,8 @@ interface Props {
 }
 
 const { year, total } = Astro.props;
+
+const ended = year === total;
 ---
 
 <div class="flex max-md:flex-col items-center gap-4 select-none">
@@ -36,7 +38,7 @@ const { year, total } = Astro.props;
               class={`relative max-md:absolute max-md:w-full max-md:rounded max-md:left-0 max-md:top-0 h-1 max-md:h-full overflow-hidden bg-neutral-700`}
             >
               <div
-                class={`h-full w-full ${isCurrent ? "bg-blue-brand" : isPending && "w-1/2 rounded-r-none bg-blue-brand"}`}
+                class={`h-full w-full ${isCurrent ? (!ended ? "bg-blue-brand" : "bg-emerald-500") : isPending && " w-1/2 rounded-r-none bg-blue-brand"}`}
               />
               {isPending && <span class="current-bar after:bg-blue-brand" />}
             </div>
