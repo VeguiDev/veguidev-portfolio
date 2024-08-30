@@ -11,7 +11,15 @@ import {
   Menu,
 } from "lucide-astro";
 
-const proyectos = [
+interface Proyect {
+  image: string;
+  title: string;
+  description: string;
+  link?: string;
+  pills: { text: string; color: string }[];
+}
+
+const proyectos: Proyect[] = [
   {
     image: "/proyectos-images/cloth.png",
     title: "Farfania Cloth",
@@ -37,6 +45,58 @@ const proyectos = [
       { text: "Nest.js", color: "yellow" },
     ],
   },
+  {
+    image: "/proyectos-images/farfadox-launcher.png",
+    title: "Farfadox Launcher",
+    description:
+      "El launcher oficial de Farfadox, que permite acceder a los servidores de Farfadox.",
+    link: "https://farfania.com/launcher",
+    pills: [
+      { text: "React", color: "blue" },
+      { text: "Tailwind", color: "red" },
+      { text: "Electron.js", color: "orange" },
+      { text: "Nest.js", color: "yellow" },
+    ],
+  },
+  {
+    image: "/proyectos-images/economy-suite.png",
+    title: "Economy Suite",
+    description:
+      "Es la suite de economia de Farfania que permite a los usuarios gestionar sus cuentas de banco, hacer transacciones, etc.",
+    pills: [
+      { text: "Java", color: "cyan" },
+      {
+        text: "SQL",
+        color: "blue",
+      },
+    ],
+  },
+  {
+    image: "/proyectos-images/eyemod-farfania.png",
+    title: "App Contactos",
+    description:
+      "La aplicación de contactos de Farfania, que permite a los usuarios guardar sus contactos.",
+    pills: [
+      { text: "Java", color: "cyan" },
+      {
+        text: "SQL",
+        color: "blue",
+      },
+    ],
+  },
+  {
+    image: "/proyectos-images/wetalk.png",
+    title: "WeTalk",
+    description:
+      "La applicación de mensajería instantanea de Farfania, que permite a los usuarios comunicarse entre ellos.",
+    pills: [
+      { text: "Java", color: "cyan" },
+      {
+        text: "SQL",
+        color: "blue",
+      },
+    ],
+  },
 ];
 ---
 
@@ -44,7 +104,7 @@ const proyectos = [
   <main class="text-white">
     <NavBar client:load />
     <section>
-      <h2 class="text-3xl font-bold text-center my-12">Proyectos</h2>
+      <h2 class="text-4xl font-bold text-center my-12">Proyectos</h2>
       <div class="relative my-5 mx-4">
         <!-- Divider -->
         <hr class="w-full border-neutral-700" />
@@ -55,16 +115,20 @@ const proyectos = [
 
       <section class="grid md:grid-cols-3 gap-5 w-[95%] mx-auto mb-5">
         {
-          proyectos.map((proyecto) => (
-            <ProyectCard
-              image={proyecto.image}
-              title={proyecto.title}
-              link={proyecto.link}
-              pills={proyecto.pills}
-            >
-              {proyecto.description}
-            </ProyectCard>
-          ))
+          proyectos.map((proyecto, iv) => {
+            return (
+              <>
+                <ProyectCard
+                  image={proyecto.image}
+                  title={proyecto.title}
+                  link={proyecto.link}
+                  pills={proyecto.pills}
+                >
+                  {proyecto.description}
+                </ProyectCard>
+              </>
+            );
+          })
         }
       </section>
     </section>
