@@ -1,0 +1,233 @@
+---
+import AbilityCard, { type Ability } from "../components/AbilityCard.astro";
+import DiscordProfile from "../components/DiscordProfile.astro";
+import Footer from "../components/Footer.astro";
+import NavBar from "../components/NavBar";
+import YearProgressBar from "../components/YearProgressBar.astro";
+import Layout from "../layouts/Layout.astro";
+
+const abilities: Ability[] = [
+  {
+    title: "React",
+    description:
+      "Framework frontend de JavaScript, utilizado para SPAs (Single Page Applications) reactivas.",
+    logo: "/tech-logos/react.svg",
+  },
+  {
+    title: "Astro",
+    description:
+      "Framework frontend para crear sitios web staticos, con soporte para React, Vue y Svelte.",
+    logo: "/tech-logos/astro.svg",
+  },
+  {
+    title: "TailwindCSS",
+    description:
+      "Framework CSS para crear interfaces de usuario modernas y responsivas.",
+    logo: "/tech-logos/tailwind.png",
+  },
+  {
+    title: "NodeJS",
+    description:
+      "Entorno de ejecución de JavaScript en el servidor, utilizado para crear APIs y aplicaciones backend.",
+    logo: "/tech-logos/nodejs.png",
+  },
+  {
+    title: "MongoDB",
+    description:
+      "Base de datos NoSQL, orientada a documentos, utilizada para almacenar datos de aplicaciones web.",
+    logo: "/tech-logos/mongodb.png",
+  },
+  {
+    title: "Strapi",
+    description:
+      "CMS (Content Management System) de código abierto, utilizado para crear APIs REST y GraphQL.",
+    logo: "/tech-logos/strapi.png",
+  },
+  {
+    title: "Nest.js",
+    description:
+      "Framework backend de NodeJS, utilizado para crear APIs REST y GraphQL escalables y mantenibles.",
+    logo: "/tech-logos/nestjs.svg",
+  },
+  {
+    title: "Next.js",
+    description:
+      "Framework frontend de React, utilizado para crear aplicaciones web y sitios web estáticos y dinámicos.",
+    logo: "/tech-logos/nextjs.png",
+  },
+  {
+    title: "Express",
+    description:
+      "Framework backend de NodeJS, utilizado para crear APIs REST y aplicaciones web.",
+    logo: "/tech-logos/expressjs.webp",
+  },
+  {
+    title: "Java",
+    description:
+      "Lenguaje de programación orientado a objetos, utilizado para crear aplicaciones web y móviles.",
+    logo: "/tech-logos/java.webp",
+  },
+  {
+    title: "MC Forge",
+    description:
+      "API de modding para Minecraft, utilizada para crear mods y servidores personalizados.",
+    logo: "/tech-logos/forgemc.png",
+  },
+  {
+    title: "MC Spigot/Bukkit",
+    description:
+      "API de desarrollo de plugins para servidores de Minecraft, utilizada para crear plugins personalizados.",
+
+    logo: "/tech-logos/spigot.webp",
+  },
+  {
+    title: "Mysql/MariaDB",
+    description:
+      "Sistemas de gestión de bases de datos relacionales, utilizados para almacenar datos de aplicaciones web.",
+    logo: "/tech-logos/mysql.png",
+  },
+  {
+    title: "SQLite",
+    description:
+      "Sistema de gestión de bases de datos relacionales, utilizado para almacenar datos de aplicaciones web.",
+    logo: "/tech-logos/sqlite.png",
+  },
+  {
+    title: "Docker",
+    description:
+      "Plataforma de código abierto para automatizar la implementación, el escalado y la administración de aplicaciones en contenedores.",
+    logo: "/tech-logos/docker.webp",
+  },
+  {
+    title: "Git",
+    description:
+      "Sistema de control de versiones distribuido, utilizado para el seguimiento de cambios en el código fuente de aplicaciones.",
+    logo: "/tech-logos/git.png",
+  },
+  {
+    title: "GitHub",
+    description:
+      "Plataforma de desarrollo colaborativo de software para alojar proyectos utilizando el sistema de control de versiones Git.",
+    logo: "/tech-logos/github.png",
+  },
+  {
+    title: "Vercel",
+    description:
+      "Plataforma de desarrollo y alojamiento de aplicaciones web y sitios web estáticos y dinámicos.",
+    logo: "/tech-logos/vercel.png",
+  },
+  {
+    title: "AWS",
+    description:
+      "Plataforma de servicios en la nube, que ofrece servicios de computación, almacenamiento y redes.",
+    logo: "/tech-logos/aws.png",
+  },
+  {
+    title: "Google Cloud",
+    description:
+      "Plataforma de servicios en la nube, que ofrece servicios de computación, almacenamiento y redes.",
+    logo: "/tech-logos/googlecloud.png",
+  },
+  {
+    title: "Cloudflare",
+    description:
+      "Plataforma de servicios en la nube, que ofrece servicios de seguridad, rendimiento y redes.",
+    logo: "/tech-logos/cloudflare.png",
+  },
+];
+---
+
+<Layout title="VeguiDev - Sobre Mi">
+  <main class="text-white">
+    <NavBar client:load />
+    <section class="relative flex justify-center">
+      <span class="w-full h-full absolute right-0 top-0 degradado2"> </span>
+      <section class="mt-20 mb-20 px-5 md:px-0">
+        <DiscordProfile />
+      </section>
+    </section>
+    <section class="mb-12 mt-12">
+      <h2 class="text-3xl font-bold text-center" id="habilidades">
+        Habilidades
+      </h2>
+      <div class="relative mt-5 mb-12 mx-4">
+        <!-- Divider -->
+
+        <div class="absolute w-full h-96 top-0 -z-10 bg-gradient"></div>
+      </div>
+      <section
+        class="mt-12 w-auto items-center grid grid-cols-1 gap-5 md:px-52"
+      >
+        {abilities.map((ab) => <AbilityCard {...ab} />)}
+      </section>
+    </section>
+    <section class="mb-12 mt-12">
+      <h2 class="text-3xl font-bold text-center" id="formacion">Formación</h2>
+      <div class="relative mt-5 mb-12 mx-4">
+        <!-- Divider -->
+
+        <div class="absolute w-full h-96 top-0 -z-10 bg-gradient"></div>
+      </div>
+      <section
+        class="mt-12 w-auto items-center grid grid-cols-1 gap-5 md:px-52"
+      >
+        <article class="bg-neutral-700/20 p-5 rounded">
+          <h3 class="text-sm font-bold mb-2">Actual</h3>
+          <section class="mt-4">
+            <h4 class="text-xl font-medium mb-6">
+              Licenciatura en Gestión de la Tecnologia de la Información -
+              <a
+                href="https://www.uade.edu.ar/facultad-de-ingenieria-y-ciencias-exactas/licenciatura-en-gestion-de-tecnologia-de-la-informacion/"
+                target="_blank"
+                rel="noopener"
+                class="hover:underline text-blue-brand"
+              >
+                (UADE)
+              </a>
+            </h4>
+            <YearProgressBar year={0} total={4} />
+            <small
+              class="inline-block text-sm text-neutral-500 select-none mt-2 max-md:text-center max-md:w-full"
+            >
+              Progreso actual de la carrera
+            </small>
+          </section>
+        </article>
+        <article class="bg-neutral-700/20 p-5 rounded">
+          <h3 class="text-sm font-bold text-emerald-500 mb-2">Completada</h3>
+          <section class="mt-4">
+            <h4 class="text-xl font-medium mb-6">
+              Tecnicatura en Multimedios & Secundaria -
+              <a
+                href="https://ipadua.edu.ar/multimedios.html"
+                target="_blank"
+                rel="noopener"
+                class="hover:underline text-blue-brand"
+              >
+                (ISAP)
+              </a>
+            </h4>
+            <YearProgressBar year={7} total={7} />
+            <small
+              class="inline-block text-sm text-neutral-500 select-none mt-2 max-md:text-center max-md:w-full"
+            >
+              Progreso total de la carrera
+            </small>
+          </section>
+        </article>
+      </section>
+    </section>
+    <Footer />
+  </main>
+
+  <style>
+    main {
+      min-height: 100vh;
+    }
+    h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin: 0;
+    }
+  </style>
+</Layout>

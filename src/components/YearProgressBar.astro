@@ -1,0 +1,105 @@
+---
+interface Props {
+  year: number;
+  total: number;
+}
+
+const { year, total } = Astro.props;
+
+const ended = year === total;
+---
+
+<div class="flex max-md:flex-col items-center gap-4 select-none">
+  <div class="w-12 h-12 rounded-full flex flex-col items-center justify-center">
+    <span>Inicio</span>
+    <!-- <span class="text-white text-2xl font-bold">{year + 1}</span> -->
+  </div>
+  <div class="flex flex-1 max-md:flex-wrap gap-2 md:gap-6">
+    {
+      Array.from({ length: total }).map((_, i) => {
+        const realYear = i + 1;
+
+        const isCurrent = i < year;
+
+        const isPending = i === year;
+
+        const isEnd = i === total;
+
+        const isStart = i === 0;
+
+        const isMiddle = !isStart && !isEnd;
+
+        return (
+          <div class="flex relative max-md:justify-center flex-col w-20 max-sm:h-20 md:flex-1">
+            <span class="text-white md:mb-3 text-xs z-10 font-bold text-center w-full">
+              {realYear}° Año
+            </span>
+            <div
+              class={`relative max-md:absolute max-md:w-full max-md:rounded max-md:left-0 max-md:top-0 h-1 max-md:h-full overflow-hidden bg-neutral-700`}
+            >
+              <div
+                class={`h-full w-full ${isCurrent ? (!ended ? "bg-blue-brand" : "bg-emerald-500") : isPending && " w-1/2 rounded-r-none bg-blue-brand"}`}
+              />
+              {isPending && <span class="current-bar after:bg-blue-brand" />}
+            </div>
+            {!isEnd && !isStart && (
+              <div
+                class={`h-6 w-6 absolute -left-6 -bottom-[0.65rem] max-md:hidden rounded-full ${isCurrent || isPending ? (!ended ? "bg-blue-brand" : "bg-emerald-500") : "bg-neutral-700"}`}
+              />
+            )}
+          </div>
+        );
+      })
+    }
+  </div>
+  <div class="w-12 h-12 rounded-full flex flex-col items-center justify-center">
+    <span>Fin</span>
+    <!-- <span class="text-white text-2xl font-bold">{year + 1}</span> -->
+  </div>
+</div>
+
+<style scoped>
+  .current-bar {
+    content: "";
+  }
+  .current-bar::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 100%;
+
+    animation: fromLtoR 1s ease-out infinite;
+    animation-delay: 0.3s;
+  }
+
+  .current-bar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background-color: #fff;
+    animation: fromLtoR 1s ease-out infinite;
+  }
+
+  @keyframes fromLtoR {
+    0% {
+      left: 50%;
+      opacity: 0;
+      transform: translateX(0%);
+    }
+
+    10% {
+      opacity: 1;
+    }
+
+    100% {
+      left: 100%;
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+  }
+</style>

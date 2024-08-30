@@ -1,173 +1,107 @@
 ---
-import DiscordProfile from "../components/DiscordProfile.astro";
+import Footer from "../components/Footer.astro";
+import NavBar from "../components/NavBar";
+import PresentationCard from "../components/PresentationCard.astro";
 import Layout from "../layouts/Layout.astro";
+import {
+  Info,
+  GraduationCap,
+  FlaskConical,
+  ChevronRight,
+  Sparkles,
+  Menu,
+} from "lucide-astro";
 ---
 
 <Layout title="VeguiDev - Desarrollador de Software">
-  <main class="bg-black flex flex-col justify-center items-center relative">
-    <div class="image-container">
-      <div class="image">
-        <img
-          src="/logo.png"
-          class="w-40 p-8 rounded-full bg-gray-900"
-          alt="VeguiDev Isotipo"
-        />
+  <main class="text-white">
+    <NavBar client:load />
+    <section>
+      <article
+        class="flex flex-col text-xl justify-center items-center my-32 mx-4"
+      >
+        <span class="w-full h-full overflow-hidden absolute right-0 top-0">
+          <img
+            src="/degradado2.png"
+            class="w-full h-full opacity-10 z-0 saturate-150 rotate-inf -rotate-45"
+            alt=""
+          />
+        </span>
+        <div
+          class="rounded-full pulse flex justify-center items-center mb-5 w-40 h-40 border-2 border-neutral-700 relative before:absolute before:w-48 before:h-48 before:opacity-70 before:rounded-full before:border before:border-neutral-700 after:absolute after:w-96 after:h-96 after:opacity-20 after:rounded-full after:border after:border-neutral-700/80"
+        >
+          <img
+            src="./foto.png"
+            class="w-40 h-40 object-cover rounded-full"
+            alt="Juan Manuel Menta foto"
+          />
+        </div>
+        <h3 class="font-bold mt-2">Juan Manuel Menta</h3>
+        <h3>veguidev</h3>
+        <h2 class="text-2xl font-black mb-2">Desarrollador de Software</h2>
+      </article>
+      <div class="relative my-12 mx-4">
+        <!-- Divider -->
+        <hr class="w-full border-neutral-700" />
+        <div class="absolute w-full h-96 top-0 bg-gradient"></div>
       </div>
-      <div class="circles"></div>
-    </div>
-    <div class="gradient"></div>
-    <h2 class="z-10 xs:text-xl md:text-4xl font-extrabold text-white mt-72">
-      JUAN MANUEL MENTA
-    </h2>
-    <h3 class="z-10 xs:text-lg md:text-2xl font-extrabold text-white mt-4">
-      VEGUIDEV
-    </h3>
-    <p class="z-10 xs:text-xs md:text-lg text-gray-500 mt-4 text-center">
-      Vuelva pronto, estamos trabajando en el sitio web.
-    </p>
+
+      <!-- Articles -->
+
+      <section class="grid md:grid-cols-2 gap-5 w-[95%] mx-auto mb-12">
+        <PresentationCard icon={Info} title="Información" link="/sobre-mi">
+          Soy Juan Manuel Menta, desarrollador de software con experiencia en
+          desarrollo web, creación de aplicaciones de escritorio multiplataforma
+          y programación de mods para servidores de Minecraft. Puedo diseñar una
+          página web profesional para tu negocio, crear herramientas internas
+          que optimicen el trabajo de tus empleados o desarrollar mods y plugins
+          que mejoren la experiencia en tu servidor de Minecraft.
+        </PresentationCard>
+        <PresentationCard
+          icon={GraduationCap}
+          title="Formación"
+          link="/sobre-mi#formacion"
+        >
+          Soy técnico en Multimedios, egresado del Instituto San Antonio de
+          Padua, donde adquirí una sólida base en comunicación audiovisual,
+          diseño y tecnología. Actualmente, continúo mi formación académica
+          cursando la Licenciatura en Gestión de los Sistemas de la Información
+          en la UADE.
+        </PresentationCard>
+        <PresentationCard
+          icon={FlaskConical}
+          title="Proyectos"
+          link="/proyectos"
+        >
+          He trabajado en una gran variedad de proyectos, desde la creación de
+          sitios web y aplicaciones de escritorio hasta el desarrollo de mods y
+          plugins para servidores de Minecraft. Si estás buscando un
+          desarrollador de software con experiencia y pasión por su trabajo,
+          ¡estás en el lugar correcto!
+        </PresentationCard>
+
+        <PresentationCard
+          icon={Sparkles}
+          title="Habilidades"
+          link="/sobre-mi#habilidades"
+        >
+          Todas las tecnologías y herramientas que utilizo en mis proyectos con
+          una descripción de cada una. Desde lenguajes de programación hasta
+          frameworks y librerías.
+        </PresentationCard>
+      </section>
+    </section>
+    <Footer />
   </main>
+
+  <style>
+    main {
+      min-height: 100vh;
+    }
+    h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin: 0;
+    }
+  </style>
 </Layout>
-
-<style>
-  main {
-    min-height: 100vh;
-  }
-  h2 {
-    font-family: "Inter", sans-serif;
-    font-weight: 900;
-  }
-
-  h3 {
-    font-family: "Inter", sans-serif;
-    font-weight: 700;
-  }
-
-  p {
-    font-family: "Space Grotesk", sans-serif;
-    font-weight: 400;
-  }
-
-  .image-container {
-    position: absolute;
-    top: -50px;
-    width: 100%;
-    height: 100vh;
-    /* overflow: hidden; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* margin-bottom: 150px; */
-  }
-
-  .image-container .image {
-    position: absolute;
-  }
-
-  .image-container img {
-    position: relative;
-    z-index: 100;
-    user-select: none;
-  }
-
-  .image-container .image::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background: rgb(52, 152, 219);
-    background: linear-gradient(
-      8deg,
-      rgba(52, 152, 219, 1) 0%,
-      rgba(155, 89, 182, 1) 100%
-    );
-    scale: 1.02;
-    z-index: 10;
-    opacity: 0.2;
-  }
-
-  .image-container .image::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-
-    border-radius: 50%;
-
-    box-shadow: 0px 0px 80px 20px rgba(255, 255, 255, 1);
-    /* scale: 1.15; */
-    opacity: 0.1;
-    mix-blend-mode: luminosity;
-  }
-
-  .gradient {
-    content: "";
-    position: absolute;
-    top: 0px;
-    /* left: 0; */
-    width: 100%;
-    height: 100%;
-    border-radius: 100%;
-
-    opacity: 0.2;
-
-    background: conic-gradient(
-      from 180deg at 50% 50%,
-      #e74c3c 0deg,
-      #3498db 180deg,
-      #9b59b6 1turn
-    );
-    mix-blend-mode: normal;
-    filter: blur(75px);
-    will-change: filter;
-  }
-
-  .circles {
-    content: "";
-    position: absolute;
-    top: -25px;
-    left: 0px;
-    width: 100%;
-    height: calc(100% + 50px);
-
-    background-size: auto;
-    background-repeat: no-repeat;
-
-    opacity: 0.2;
-
-    background: radial-gradient(
-      circle,
-      /* Primero */ rgba(255, 255, 255, 0) 30%,
-      rgba(189, 195, 199, 0.5) 30%,
-      rgba(189, 195, 199, 0.5) 30.2%,
-      rgba(255, 255, 255, 0) 30.2%,
-      /* Segundo */ rgba(255, 255, 255, 0) 60%,
-      rgba(189, 195, 199, 0.2) 60%,
-      rgba(189, 195, 199, 0.2) 60.2%,
-      rgba(255, 255, 255, 0) 60.2%
-    );
-
-    animation: circlesAnim 10s infinite;
-
-    scale: 1;
-    /* background-color: red; */
-  }
-
-  @keyframes circlesAnim {
-    0% {
-      opacity: 0.02;
-    }
-
-    50% {
-      opacity: 0.4;
-    }
-
-    100% {
-      opacity: 0.02;
-    }
-  }
-</style>

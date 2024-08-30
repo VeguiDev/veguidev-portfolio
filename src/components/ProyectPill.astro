@@ -1,0 +1,36 @@
+---
+interface Props {
+  text: string;
+  color: "blue" | "red" | "yellow" | "cyan" | "green" | string;
+}
+
+const { color, text } = Astro.props;
+---
+
+{
+  color == "blue" ? (
+    <span class="bg-blue-500/20 text-blue-500 border border-blue-500 px-4 py-1 rounded-full text-sm">
+      {text}
+    </span>
+  ) : color == "red" ? (
+    <span class="bg-red-500/20 text-red-500 border border-red-500 px-4 py-1 rounded-full text-sm">
+      {text}
+    </span>
+  ) : color == "yellow" ? (
+    <span class="bg-yellow-500/20 text-yellow-500 border border-yellow-500 px-4 py-1 rounded-full text-sm">
+      {text}
+    </span>
+  ) : color == "green" ? (
+    <span class="bg-green-500/20 text-green-500 border border-green-500 px-4 py-1 rounded-full text-sm">
+      {text}
+    </span>
+  ) : color == "cyan" ? (
+    <span class="bg-cyan-500/20 text-cyan-500 border border-cyan-500 px-4 py-1 rounded-full text-sm">
+      {text}
+    </span>
+  ) : (
+    <span class="bg-orange-500/20 text-orange-500 border border-orange-500 px-4 py-1 rounded-full text-sm">
+      {text}
+    </span>
+  )
+}

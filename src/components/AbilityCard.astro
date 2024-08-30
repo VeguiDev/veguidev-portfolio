@@ -1,0 +1,32 @@
+---
+export interface Ability {
+  title: string;
+  description: string;
+  logo: string;
+}
+
+interface Props extends Ability {}
+
+const { title, logo, description } = Astro.props;
+---
+
+<article
+  class="grid grid-cols-[96px_auto] w-auto items-center gap-8 bg-neutral-700/20 backdrop-blur p-5 rounded"
+>
+  <section
+    class="w-24 h-24 flex items-center justify-center rounded-full bg-neutral-700 select-none"
+  >
+    <img
+      src={logo}
+      class="w-2/3 h-2/3 object-contain"
+      alt={"Logo de " + title}
+    />
+  </section>
+
+  <section>
+    <h3 class="text-2xl font-bold">{title}</h3>
+    <p>
+      {description}
+    </p>
+  </section>
+</article>

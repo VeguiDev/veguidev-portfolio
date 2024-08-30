@@ -3,15 +3,27 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
+    "dev": "astro dev --host 0.0.0.0",
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/tailwind": "^4.0.0",
-    "astro": "^2.9.2",
+    "@astrojs/react": "^3.6.2",
+    "@astrojs/tailwind": "^5.1.0",
+    "@astrojs/vercel": "^7.8.0",
+    "@types/react": "^18.3.4",
+    "@types/react-dom": "^18.3.0",
+    "astro": "^4.14.5",
+    "lucide": "^0.433.0",
+    "lucide-astro": "^0.436.0",
+    "lucide-react": "^0.436.0",
+    "react": "^19.0.0-beta",
+    "react-dom": "^19.0.0-beta",
     "tailwindcss": "^3.3.3"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.4"
   }
 }
