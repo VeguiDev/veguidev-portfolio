@@ -54,6 +54,14 @@ export default function NavBar() {
               Sobre Mi
             </a>
           </li>
+          <li>
+            <a
+              href="/contacto"
+              className="p-2 w-full inline-block hover:bg-white/10 rounded"
+            >
+              Contacto
+            </a>
+          </li>
         </ul>
       </nav>
     </header>
