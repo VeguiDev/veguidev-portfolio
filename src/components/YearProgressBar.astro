@@ -44,7 +44,7 @@ const ended = year === total;
             </div>
             {!isEnd && !isStart && (
               <div
-                class={`h-6 w-6 absolute -left-6 -bottom-[0.65rem] max-md:hidden rounded-full ${isCurrent || isPending ? "bg-blue-brand" : "bg-neutral-700"}`}
+                class={`h-6 w-6 absolute -left-6 -bottom-[0.65rem] max-md:hidden rounded-full ${isCurrent || isPending ? (!ended ? "bg-blue-brand" : "bg-emerald-500") : "bg-neutral-700"}`}
               />
             )}
           </div>
