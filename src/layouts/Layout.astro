@@ -4,10 +4,12 @@ interface Props {
 }
 
 const { title } = Astro.props;
+
+const locale = Astro.currentLocale || "es";
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang={locale}>
   <head>
     <meta charset="UTF-8" />
     <meta
