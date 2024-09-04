@@ -1,21 +1,19 @@
 ---
+import i18next, { t } from "i18next";
+import { Trans, HeadHrefLangs } from "astro-i18next/components";
+
 interface Props {
   title: string;
 }
 
 const { title } = Astro.props;
-
-const locale = Astro.currentLocale || "es";
 ---
 
 <!doctype html>
-<html lang={locale}>
+<html lang={i18next.language}>
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="description"
-      content="Soy VeguiDev un desarrollador de software que puede desarrollar la página para tu negocio, el servicio para tus empleados o un mod para tu server de Minecraft."
-    />
+    <meta name="description" content={t("site.description")} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="./logo.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -31,8 +29,8 @@ const locale = Astro.currentLocale || "es";
       rel="stylesheet"
     />
     <link rel="manifest" href="manifest.json" />
-
     <title>{title}</title>
+    <HeadHrefLangs />
   </head>
   <body>
     <slot />

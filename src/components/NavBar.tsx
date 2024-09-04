@@ -6,6 +6,7 @@ import {
   ArrowDownIcon,
 } from "lucide-react";
 import { useEffect, useState } from "react";
+import LenguajeSwitch from "./LanguajeSwitch";
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -113,6 +114,7 @@ export default function NavBar() {
           </li>
         </ul>
       </nav>
+      <LenguajeSwitch />
     </header>
   );
 }
