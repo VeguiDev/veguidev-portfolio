@@ -7,6 +7,8 @@ import {
 } from "lucide-react";
 import { useEffect, useState } from "react";
 import LenguajeSwitch from "./LanguajeSwitch";
+import i18next, { t } from "i18next";
+import { getAbsoluteLocaleUrl, getLocaleByPath } from "astro:i18n";
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,7 +39,7 @@ export default function NavBar() {
           : "bg-neutral-900 md:bg-neutral-900/70 md:backdrop-blur"
       }`}
     >
-      <a href="/">
+      <a href={getAbsoluteLocaleUrl(i18next.language, "/")}>
         <img src="/logo.png" alt="VeguiDev logo" className="w-12 h-12" />
       </a>
       <button onClick={() => setIsOpen(!isOpen)} className="ml-auto md:hidden">
@@ -57,50 +59,56 @@ export default function NavBar() {
         <ul className="w-full h-full justify-center flex flex-col gap-2 md:h-auto md:flex-row">
           <li>
             <a
-              href="/"
+              href={getAbsoluteLocaleUrl(i18next.language, "/")}
               className="p-2 w-full inline-flex gap-3 hover:bg-white/10 rounded"
             >
-              Inicio
+              {t("home")}
             </a>
           </li>
           <li>
             <a
-              href="/proyectos"
+              href={getAbsoluteLocaleUrl(i18next.language, "/proyectos")}
               className="p-2 w-full inline-block hover:bg-white/10 rounded"
             >
-              Proyectos
+              {t("projects")}
             </a>
           </li>
           <li>
             <div className="group relative">
               <a
-                href="/sobre-mi"
+                href={getAbsoluteLocaleUrl(i18next.language, "/sobre-mi")}
                 className="p-2 w-full inline-block hover:bg-white/10 rounded"
               >
-                Sobre Mi
+                {t("aboutMe")}
               </a>
               <section className="absolute transition-all duration-200 md:-translate-y-1/2 md:scale-0 md:opacity-0 group-hover:translate-y-0 group-hover:scale-100 group-hover:opacity-100 mt-2 md:-left-6 md:shadow-lg md:bg-neutral-900/70 px-4 p-2 rounded max-md:relative">
                 <a
-                  href="/sobre-mi#habilidades"
+                  href={getAbsoluteLocaleUrl(
+                    i18next.language,
+                    "/sobre-mi#habilidades"
+                  )}
                   className="p-2 w-full inline-block hover:bg-white/10 rounded"
                 >
-                  Habilidades
+                  {t("skills")}
                 </a>
                 <a
-                  href="/sobre-mi#formacion"
+                  href={getAbsoluteLocaleUrl(
+                    i18next.language,
+                    "/sobre-mi#formacion"
+                  )}
                   className="p-2 w-full inline-block hover:bg-white/10 rounded"
                 >
-                  Formación
+                  {t("education")}
                 </a>
               </section>
             </div>
           </li>
           <li>
             <a
-              href="/contacto"
+              href={getAbsoluteLocaleUrl(i18next.language, "/contacto")}
               className="p-2 w-full inline-block hover:bg-white/10 rounded"
             >
-              Contacto
+              {t("contact")}
             </a>
           </li>
           <li>

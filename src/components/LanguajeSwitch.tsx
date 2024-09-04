@@ -2,6 +2,11 @@ import Flag from "./Flag";
 import { ChevronDownIcon } from "lucide-react";
 import { useEffect, useState } from "react";
 import i18next from "i18next";
+import {
+  getAbsoluteLocaleUrl,
+  getLocaleByPath,
+  getRelativeLocaleUrl,
+} from "astro:i18n";
 
 export default function LenguajeSwitch() {
   const [open, setopen] = useState(false);
@@ -10,21 +15,15 @@ export default function LenguajeSwitch() {
   const lngs = ["es", "en"];
 
   const changeLanguage = (lng: string) => {
-    const path = window.location.pathname;
+    let path = window.location.pathname;
 
     if (lng === i18n.language) return;
 
-    const currentLng = i18n.language;
-
     if (lng === "es") {
-      if (currentLng === "en") {
-        window.location.href = path.replace("/en", "/");
-      }
-    } else {
-      if (currentLng === "es") {
-        window.location.href = path.replace("/", "/en");
-      }
+      path = path.replace("/en", "");
     }
+
+    window.location.replace(getAbsoluteLocaleUrl(lng, path));
   };
 
   return (

@@ -1,5 +1,11 @@
 {
   "site": {
     "description": "Soy VeguiDev un desarrollador de software que puede desarrollar la página para tu negocio, el servicio para tus empleados o un mod para tu server de Minecraft."
-  }
+  },
+  "home": "Inicio",
+  "aboutMe": "Sobre mí",
+  "projects": "Proyectos",
+  "contact": "Contacto",
+  "skills": "Habilidades",
+  "education": "Formación"
 }
