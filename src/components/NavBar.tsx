@@ -54,7 +54,7 @@ export default function NavBar() {
             <XIcon />
           </button>
         </section>
-        <ul className="w-full h-full flex flex-col gap-2 md:h-auto md:flex-row">
+        <ul className="w-full h-full justify-center flex flex-col gap-2 md:h-auto md:flex-row">
           <li>
             <a
               href="/"
@@ -106,15 +106,17 @@ export default function NavBar() {
           <li>
             <a
               href="/CV - Juan Manuel Menta.pdf"
-              className="p-2 pl-4 flex gap-3 w-full hover:bg-white/10 rounded"
+              className="p-2 flex gap-3 w-full hover:bg-white/10 rounded"
               target="_blank"
             >
               CV <ArrowDownIcon />
             </a>
           </li>
+          <li className="ml-auto">
+            <LenguajeSwitch />
+          </li>
         </ul>
       </nav>
-      <LenguajeSwitch />
     </header>
   );
 }
