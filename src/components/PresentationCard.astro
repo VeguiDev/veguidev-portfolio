@@ -4,7 +4,7 @@ import { ChevronRight } from "lucide-astro";
 interface Props {
   icon: any;
   title: string;
-  link?: string;
+  link?: string | null;
 }
 
 const { icon: Icon, title, link } = Astro.props;

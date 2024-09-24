@@ -7,5 +7,13 @@
   "projects": "Proyectos",
   "contact": "Contacto",
   "skills": "Habilidades",
-  "education": "Formación"
+  "education": "Formación",
+  "softwareDeveloper": "Desarrollador de Software",
+  "homeArticle": {
+    "info": {
+      "title": "Información",
+      "content": "Soy Juan Manuel Menta, desarrollador de software con experiencia en desarrollo web, creación de aplicaciones de escritorio multiplataforma y programación de mods para servidores de Minecraft. Puedo diseñar una página web profesional para tu negocio, crear herramientas internas que optimicen el trabajo de tus empleados o desarrollar mods y plugins que mejoren la experiencia en tu servidor de Minecraft.",
+      "href": "/sobre-mi"
+    }
+  }
 }
