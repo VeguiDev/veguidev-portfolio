@@ -107,7 +107,7 @@ export default function NavBar() {
           </li>
           <li>
             <a
-              href={t("cvHref") || "/CV - Juan Manuel Menta.pdf"}
+              href={t("cvLink") || "/CV - Juan Manuel Menta.pdf"}
               className="p-2 flex gap-3 w-full hover:bg-white/10 rounded"
               target="_blank"
             >
