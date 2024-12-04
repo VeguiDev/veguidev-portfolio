@@ -7,10 +7,12 @@ import {
 } from "lucide-react";
 import { useEffect, useState } from "react";
 import LenguajeSwitch from "./LanguajeSwitch";
-import i18next, { t } from "i18next";
+import i18next from "i18next";
 import { getAbsoluteLocaleUrl, getLocaleByPath } from "astro:i18n";
+import { useTranslation } from "react-i18next";
 
 export default function NavBar() {
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
 
   const [onTop, setOnTop] = useState(true);
