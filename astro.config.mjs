@@ -9,7 +9,7 @@ import vercel from "@astrojs/vercel/serverless";
 export default defineConfig({
   integrations: [astroI18next(), react(), tailwind()],
   build: {
-    assetsPrefix: "./",
+    assetsPrefix: "/",
   },
   output: "hybrid",
   adapter: vercel(),
