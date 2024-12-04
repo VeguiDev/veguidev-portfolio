@@ -123,102 +123,102 @@
     },
     {
       "title": "Astro",
-      "description": "Framework frontend para crear sitios web staticos, con soporte para React, Vue y Svelte.",
+      "description": "Framework to create data driven static sites and dynamic web apps.",
       "logo": "/tech-logos/astro.svg"
     },
     {
       "title": "TailwindCSS",
-      "description": "Framework CSS para crear interfaces de usuario modernas y responsivas.",
+      "description": "Utility-first CSS framework used to create responsive and customizable web designs.",
       "logo": "/tech-logos/tailwind.png"
     },
     {
       "title": "NodeJS",
-      "description": "Entorno de ejecuci\u00F3n de JavaScript en el servidor, utilizado para crear APIs y aplicaciones backend.",
+      "description": "JavaScript runtime environment used to create server-side applications.",
       "logo": "/tech-logos/nodejs.png"
     },
     {
       "title": "MongoDB",
-      "description": "Base de datos NoSQL, orientada a documentos, utilizada para almacenar datos de aplicaciones web.",
+      "description": "NoSQL database used to store data for web applications.",
       "logo": "/tech-logos/mongodb.png"
     },
     {
       "title": "Strapi",
-      "description": "CMS (Content Management System) de c\u00F3digo abierto, utilizado para crear APIs REST y GraphQL.",
+      "description": "CMS (Content Management System) open-source, headless, and customizable.",
       "logo": "/tech-logos/strapi.png"
     },
     {
       "title": "Nest.js",
-      "description": "Framework backend de NodeJS, utilizado para crear APIs REST y GraphQL escalables y mantenibles.",
+      "description": "Backend framework for NodeJS, used to create REST APIs and GraphQL APIs.",
       "logo": "/tech-logos/nestjs.svg"
     },
     {
       "title": "Next.js",
-      "description": "Framework frontend de React, utilizado para crear aplicaciones web y sitios web est\u00E1ticos y din\u00E1micos.",
+      "description": "The React.js framework for server-side rendering and static site generation.",
       "logo": "/tech-logos/nextjs.png"
     },
     {
       "title": "Express",
-      "description": "Framework backend de NodeJS, utilizado para crear APIs REST y aplicaciones web.",
+      "description": "Backend framework for NodeJS, used to create REST APIs and web applications.",
       "logo": "/tech-logos/expressjs.webp"
     },
     {
       "title": "Java",
-      "description": "Lenguaje de programaci\u00F3n orientado a objetos, utilizado para crear aplicaciones web y m\u00F3viles.",
+      "description": "Object-oriented programming language used to create desktop applications and web applications.",
       "logo": "/tech-logos/java.webp"
     },
     {
       "title": "MC Forge",
-      "description": "API de modding para Minecraft, utilizada para crear mods y servidores personalizados.",
+      "description": "Minecraft modding API, used to create mods",
       "logo": "/tech-logos/forgemc.png"
     },
     {
       "title": "MC Spigot/Bukkit",
-      "description": "API de desarrollo de plugins para servidores de Minecraft, utilizada para crear plugins personalizados.",
+      "description": "Minecraft server plugin API, used to create plugins",
       "logo": "/tech-logos/spigot.webp"
     },
     {
       "title": "Mysql/MariaDB",
-      "description": "Sistemas de gesti\u00F3n de bases de datos relacionales, utilizados para almacenar datos de aplicaciones web.",
+      "description": "Relational database management system, used to store data for web applications.",
       "logo": "/tech-logos/mysql.png"
     },
     {
       "title": "SQLite",
-      "description": "Sistema de gesti\u00F3n de bases de datos relacionales, utilizado para almacenar datos de aplicaciones web.",
+      "description": "Serverless relational database management system, used to store data for web applications.",
       "logo": "/tech-logos/sqlite.png"
     },
     {
       "title": "Docker",
-      "description": "Plataforma de c\u00F3digo abierto para automatizar la implementaci\u00F3n, el escalado y la administraci\u00F3n de aplicaciones en contenedores.",
+      "description": "Containerization platform used to create, deploy, and run applications in containers.",
       "logo": "/tech-logos/docker.webp"
     },
     {
       "title": "Git",
-      "description": "Sistema de control de versiones distribuido, utilizado para el seguimiento de cambios en el c\u00F3digo fuente de aplicaciones.",
+      "description": "Version control system and used for collaboration in projects.",
       "logo": "/tech-logos/git.png"
     },
     {
       "title": "GitHub",
-      "description": "Plataforma de desarrollo colaborativo de software para alojar proyectos utilizando el sistema de control de versiones Git.",
+      "description": "Web-based Git repository hosting service, used for collaboration in projects.",
       "logo": "/tech-logos/github.png"
     },
     {
       "title": "Vercel",
-      "description": "Plataforma de desarrollo y alojamiento de aplicaciones web y sitios web est\u00E1ticos y din\u00E1micos.",
+      "description": "Cloud platform for static sites and serverless functions, used to deploy web applications.",
       "logo": "/tech-logos/vercel.png"
     },
     {
       "title": "AWS",
-      "description": "Plataforma de servicios en la nube, que ofrece servicios de computaci\u00F3n, almacenamiento y redes.",
+      "description": "Cloud services platform, offering computing power, storage, and networking services.",
       "logo": "/tech-logos/aws.png"
     },
     {
       "title": "Google Cloud",
-      "description": "Plataforma de servicios en la nube, que ofrece servicios de computaci\u00F3n, almacenamiento y redes.",
+      "description": "Cloud services platform, offering computing power, storage, and networking services.",
       "logo": "/tech-logos/googlecloud.png"
     },
     {
       "title": "Cloudflare",
-      "description": "Plataforma de servicios en la nube, que ofrece servicios de seguridad, rendimiento y redes.",
+      "description": "Web infrastructure and website security company, offering content delivery network services.",
       "logo": "/tech-logos/cloudflare.png"
     }
   ],
