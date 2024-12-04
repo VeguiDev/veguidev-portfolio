@@ -1,0 +1,125 @@
+---
+import { changeLanguage, t } from "i18next";
+import AbilityCard, { type Ability } from "../../components/AbilityCard.astro";
+import DiscordProfile from "../../components/DiscordProfile.astro";
+import Footer from "../../components/Footer.astro";
+import NavBar from "../../components/NavBar";
+import YearProgressBar from "../../components/YearProgressBar.astro";
+import Layout from "../../layouts/Layout.astro";
+
+changeLanguage(Astro.currentLocale);
+
+const abilities: Ability[] = t("abilities", { returnObjects: true });
+---
+
+<Layout title="VeguiDev - Sobre Mi">
+  <main class="text-white">
+    <NavBar client:load />
+    <section class="relative flex justify-center">
+      <span class="w-full h-full absolute right-0 top-0 degradado2"> </span>
+      <section class="mt-20 mb-20 px-5 md:px-0">
+        <DiscordProfile />
+      </section>
+    </section>
+    <section class="mb-12 mt-12">
+      <h2 class="text-3xl font-bold text-center" id="skills">
+        {t("skills")}
+      </h2>
+      <div class="relative mt-5 mb-12 mx-4">
+        <!-- Divider -->
+
+        <div class="absolute w-full h-96 top-0 -z-10 bg-gradient"></div>
+      </div>
+      <section
+        class="mt-12 w-auto items-center grid grid-cols-1 gap-5 md:px-52"
+      >
+        {abilities.map((ab) => <AbilityCard {...ab} />)}
+      </section>
+    </section>
+    <section class="mb-12 mt-12">
+      <h2 class="text-3xl font-bold text-center" id="formation">
+        {t("education")}
+      </h2>
+      <div class="relative mt-5 mb-12 mx-4">
+        <!-- Divider -->
+
+        <div class="absolute w-full h-96 top-0 -z-10 bg-gradient"></div>
+      </div>
+      <section
+        class="mt-12 w-auto items-center grid grid-cols-1 gap-5 md:px-52"
+      >
+        <article class="bg-neutral-700/20 p-5 rounded">
+          <h3 class="text-sm font-bold mb-2">{t("current")}</h3>
+          <section class="mt-4">
+            <h4 class="text-xl font-medium mb-6">
+              {t("educations.uade_gtts.title")} -
+              <a
+                href="https://www.uade.edu.ar/facultad-de-ingenieria-y-ciencias-exactas/licenciatura-en-gestion-de-tecnologia-de-la-informacion/"
+                target="_blank"
+                rel="noopener"
+                class="hover:underline text-blue-brand"
+              >
+                (UADE)
+              </a>
+            </h4>
+            <YearProgressBar year={0} total={4} />
+            <small
+              class="inline-block text-sm text-neutral-500 select-none mt-2 max-md:text-center max-md:w-full"
+            >
+              {t("educations.progress")}
+            </small>
+          </section>
+        </article>
+        <article class="bg-neutral-700/20 p-5 rounded">
+          <h3 class="text-sm font-bold text-emerald-500 mb-2">
+            {t("completed")}
+          </h3>
+          <section class="mt-4">
+            <h4 class="text-xl font-medium mb-6">
+              {t("educations.multimedios.title")} -
+              <a
+                href="https://ipadua.edu.ar/multimedios.html"
+                target="_blank"
+                rel="noopener"
+                class="hover:underline text-blue-brand"
+              >
+                (ISAP)
+              </a>
+            </h4>
+            <YearProgressBar year={7} total={7} />
+            <small
+              class="inline-block text-sm text-neutral-500 select-none mt-2 max-md:text-center max-md:w-full"
+            >
+              {t("educations.progress")}
+            </small>
+          </section>
+        </article>
+      </section>
+    </section>
+    <section class="mb-12">
+      <h2 class="text-4xl font-bold text-center my-12">
+        {t("be_interested")}
+      </h2>
+      <ul class="flex flex-col items-center text-2xl gap-5">
+        <li>
+          <a
+            class="text-blue-brand hover:underline"
+            href={t("homeArticle.projects.href")}>{t("projects")}</a
+          >
+        </li>
+      </ul>
+    </section>
+    <Footer />
+  </main>
+
+  <style>
+    main {
+      min-height: 100vh;
+    }
+    h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin: 0;
+    }
+  </style>
+</Layout>

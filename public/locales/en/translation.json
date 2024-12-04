@@ -3,6 +3,9 @@
     "description": "I am VeguiDev, a software developer who can create a website for your business, a service for your employees, or a mod for your Minecraft server.",
     "footer": "ALL RIGHTS RESERVED © 2024 by VeguiDev"
   },
+  "subject": "Subject",
+  "message": "Message",
+  "send": "Send",
   "discord": {
     "about": "ABOUT ME",
     "aboutContent": "Hi, I'm Juan Manuel, known as VeguiDev, a passionate 19-year-old software developer determined to boost your business by building the solutions you need.",
@@ -12,37 +15,44 @@
     "inputSubtext": "Press enter to send the message"
   },
   "home": "Home",
+  "homeHref": "/en",
   "aboutMe": "About Me",
+  "aboutMeHref": "/en/about-me",
   "projects": "Projects",
+  "projectsHref": "/en/projects",
   "contact": "Contact",
+  "contactHref": "/en/contact",
   "skills": "Skills",
+  "skillsHref": "/en/about-me#skills",
   "education": "Education",
+  "educationHref": "/en/about-me#formation",
   "softwareDeveloper": "Software Developer",
+  "cvLink": "/CV en - Juan Manuel Menta.pdf",
   "homeArticle": {
     "info": {
       "title": "Information",
       "content": "I am Juan Manuel Menta, a software developer with experience in web development, cross-platform desktop applications, and Minecraft server modding. I can design a professional website for your business, create internal tools to optimize your employees' workflow, or develop mods and plugins to enhance the experience on your Minecraft server.",
-      "href": "/about-me"
+      "href": "/en/about-me"
     },
     "formation": {
       "title": "Education",
       "content": "I am a Multimedia Technician, graduated from the San Antonio de Padua Institute, where I gained a solid foundation in audiovisual communication, design, and technology. Currently, I continue my academic training by pursuing a degree in Information Systems Management at UADE.",
-      "href": "/about-me#education"
+      "href": "/en/about-me#formation"
     },
     "projects": {
       "title": "Projects",
       "content": "I have worked on a wide range of projects, from creating websites and desktop applications to developing mods and plugins for Minecraft servers. If you are looking for a software developer with experience and passion for their work, you are in the right place!",
-      "href": "/projects"
+      "href": "/en/projects"
     },
     "skills": {
       "title": "Skills",
       "content": "All the technologies and tools I use in my projects with a description of each one. From programming languages to frameworks and libraries.",
-      "href": "/about-me#skills"
+      "href": "/en/about-me#skills"
     }
   },
   "projects_site": [
     {
-      "image": "/projects-images/cloth.png",
+      "image": "/proyectos-images/cloth.png",
       "title": "Farfania Cloth",
       "description": "Farfania Cloth is a tool that allows Farfania designers to create clothing and include it in the game.",
       "pills": [
@@ -53,7 +63,7 @@
       ]
     },
     {
-      "image": "/projects-images/farfania-landing.png",
+      "image": "/proyectos-images/farfania-landing.png",
       "title": "Farfania Landing",
       "description": "The official website of Farfania 2, Farfadox's country in Minecraft.",
       "link": "https://farfania.com/",
@@ -65,7 +75,7 @@
       ]
     },
     {
-      "image": "/projects-images/farfadox-launcher.png",
+      "image": "/proyectos-images/farfadox-launcher.png",
       "title": "Farfadox Launcher",
       "description": "The official Farfadox launcher, allowing access to Farfadox servers.",
       "link": "https://farfania.com/launcher",
@@ -77,7 +87,7 @@
       ]
     },
     {
-      "image": "/projects-images/economy-suite.png",
+      "image": "/proyectos-images/economy-suite.png",
       "title": "Economy Suite",
       "description": "The economy suite of Farfania, allowing users to manage their bank accounts, make transactions, etc.",
       "pills": [
@@ -86,7 +96,7 @@
       ]
     },
     {
-      "image": "/projects-images/eyemod-farfania.png",
+      "image": "/proyectos-images/eyemod-farfania.png",
       "title": "Contacts App",
       "description": "The Farfania contacts app, allowing users to save their contacts.",
       "pills": [
@@ -95,7 +105,7 @@
       ]
     },
     {
-      "image": "/projects-images/wetalk.png",
+      "image": "/proyectos-images/wetalk.png",
       "title": "WeTalk",
       "description": "The Farfania instant messaging app, enabling users to communicate with each other.",
       "pills": [

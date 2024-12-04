@@ -3,6 +3,9 @@
     "description": "Soy VeguiDev un desarrollador de software que puede desarrollar la página para tu negocio, el servicio para tus empleados o un mod para tu server de Minecraft.",
     "footer": "TODOS LOS DERECHOS RESERVADOS © 2024 by VeguiDev"
   },
+  "subject": "Asunto",
+  "message": "Mensaje",
+  "send": "Enviar",
   "discord": {
     "about": "SOBRE MÍ",
     "aboutContent": "Hola, soy Juan Manuel, conocido como VeguiDev, un apasionado desarrollador de software de 19 años con la determinación de impulsar tu negocio construyendo las soluciones que necesitas.",
@@ -12,12 +15,19 @@
     "inputSubtext": "Presioná enter para enviar el mensaje"
   },
   "home": "Inicio",
+  "homeHref": "/",
   "aboutMe": "Sobre mí",
+  "aboutMeHref": "/sobre-mi",
   "projects": "Proyectos",
+  "projectsHref": "/proyectos",
   "contact": "Contacto",
+  "contactHref": "/contacto",
   "skills": "Habilidades",
+  "skillsHref": "/sobre-mi#habilidades",
   "education": "Formación",
+  "educationHref": "/sobre-mi#formacion",
   "softwareDeveloper": "Desarrollador de Software",
+  "cvLink": "/CV - Juan Manuel Menta.pdf",
   "homeArticle": {
     "info": {
       "title": "Información",

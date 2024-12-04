@@ -59,7 +59,7 @@ export default function NavBar() {
         <ul className="w-full h-full justify-center flex flex-col gap-2 md:h-auto md:flex-row">
           <li>
             <a
-              href={getAbsoluteLocaleUrl(i18next.language, "/")}
+              href={t("homeHref") || "/"}
               className="p-2 w-full inline-flex gap-3 hover:bg-white/10 rounded"
             >
               {t("home")}
@@ -67,7 +67,7 @@ export default function NavBar() {
           </li>
           <li>
             <a
-              href={getAbsoluteLocaleUrl(i18next.language, "/proyectos")}
+              href={t("projectsHref") || "/proyectos"}
               className="p-2 w-full inline-block hover:bg-white/10 rounded"
             >
               {t("projects")}
@@ -76,26 +76,20 @@ export default function NavBar() {
           <li>
             <div className="group relative">
               <a
-                href={getAbsoluteLocaleUrl(i18next.language, "/sobre-mi")}
+                href={t("aboutMeHref") || "/sobre-mi"}
                 className="p-2 w-full inline-block hover:bg-white/10 rounded"
               >
                 {t("aboutMe")}
               </a>
               <section className="absolute transition-all duration-200 md:-translate-y-1/2 md:scale-0 md:opacity-0 group-hover:translate-y-0 group-hover:scale-100 group-hover:opacity-100 mt-2 md:-left-6 md:shadow-lg md:bg-neutral-900/70 px-4 p-2 rounded max-md:relative">
                 <a
-                  href={getAbsoluteLocaleUrl(
-                    i18next.language,
-                    "/sobre-mi#habilidades"
-                  )}
+                  href={t("skillsHref") || "/sobre-mi#skills"}
                   className="p-2 w-full inline-block hover:bg-white/10 rounded"
                 >
                   {t("skills")}
                 </a>
                 <a
-                  href={getAbsoluteLocaleUrl(
-                    i18next.language,
-                    "/sobre-mi#formacion"
-                  )}
+                  href={t("educationHref") || "/sobre-mi#education"}
                   className="p-2 w-full inline-block hover:bg-white/10 rounded"
                 >
                   {t("education")}
@@ -105,7 +99,7 @@ export default function NavBar() {
           </li>
           <li>
             <a
-              href={getAbsoluteLocaleUrl(i18next.language, "/contacto")}
+              href={t("contactHref") || "/contacto"}
               className="p-2 w-full inline-block hover:bg-white/10 rounded"
             >
               {t("contact")}
@@ -113,7 +107,7 @@ export default function NavBar() {
           </li>
           <li>
             <a
-              href="/CV - Juan Manuel Menta.pdf"
+              href={t("cvHref") || "/CV - Juan Manuel Menta.pdf"}
               className="p-2 flex gap-3 w-full hover:bg-white/10 rounded"
               target="_blank"
             >

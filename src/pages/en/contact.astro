@@ -1,12 +1,19 @@
 ---
-import { changeLanguage } from "i18next";
+import { changeLanguage, t } from "i18next";
 import Footer from "../../components/Footer.astro";
 import NavBar from "../../components/NavBar";
 import ProyectCard from "../../components/ProyectCard.astro";
 import Layout from "../../layouts/Layout.astro";
-import { Info, GraduationCap, FlaskConical, ChevronRight, Sparkles, Menu, } from "lucide-astro";
+import {
+  Info,
+  GraduationCap,
+  FlaskConical,
+  ChevronRight,
+  Sparkles,
+  Menu,
+} from "lucide-astro";
 
-changeLanguage("en");
+changeLanguage(Astro.currentLocale);
 ---
 
 <Layout title="VeguiDev - Contacto">
@@ -36,20 +43,20 @@ changeLanguage("en");
           />
         </div>
         <div class="flex flex-col">
-          <label for="subject" class="select-none mb-1">Asunto</label>
+          <label for="subject" class="select-none mb-1">Subject</label>
           <input
             type="text"
             class="p-1 text-white px-2 rounded hover:bg-neutral-500 focus:outline-none shadow focus:outline focus:outline-blue-brand/20 transition-all duration-150 bg-neutral-600"
-            placeholder="Asunto . . ."
+            placeholder="Subject . . ."
             id="subject"
             required
           />
         </div>
         <div class="flex flex-col">
-          <label for="msg" class="select-none mb-1">Mensaje</label>
+          <label for="msg" class="select-none mb-1">Message</label>
           <textarea
             class="p-1 text-white px-2 rounded hover:bg-neutral-500 focus:outline-none shadow focus:outline focus:outline-blue-brand/20 transition-all duration-150 bg-neutral-600 resize-none"
-            placeholder="Mensaje . . ."
+            placeholder="Message . . ."
             rows="5"
             required
             id="msg"></textarea>
@@ -59,32 +66,38 @@ changeLanguage("en");
           type="submit"
           id="submit"
         >
-          Enviar
+          Send
         </button>
       </form>
     </section>
     <section class="mb-12">
-      <h2 class="text-4xl font-bold text-center my-12">Puede interesarte</h2>
+      <h2 class="text-4xl font-bold text-center my-12">{t("be_interested")}</h2>
       <ul class="flex flex-col items-center text-2xl gap-5">
         <li>
           <a
             class="text-blue-brand hover:underline"
-            href="/sobre-mi#habilidades">Habilidades</a
+            href={t("homeArticle.skills.href")}
+          >
+            {t("homeArticle.skills.title")}
+          </a>
+        </li>
+        <li>
+          <a
+            class="text-blue-brand hover:underline"
+            href={t("homeArticle.formation.href")}
+            >{t("homeArticle.formation.title")}</a
           >
         </li>
         <li>
-          <a class="text-blue-brand hover:underline" href="/sobre-mi#formacion"
-            >Formación</a
+          <a
+            class="text-blue-brand hover:underline"
+            href={t("homeArticle.info.href")}>{t("aboutMe")}</a
           >
         </li>
         <li>
-          <a class="text-blue-brand hover:underline" href="/sobre-mi"
-            >Sobre Mi</a
-          >
-        </li>
-        <li>
-          <a class="text-blue-brand hover:underline" href="/proyectos"
-            >Proyectos</a
+          <a
+            class="text-blue-brand hover:underline"
+            href={t("homeArticle.projects.href")}>{t("projects")}</a
           >
         </li>
       </ul>
