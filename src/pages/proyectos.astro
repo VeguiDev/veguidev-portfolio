@@ -1,103 +1,40 @@
 ---
-import { changeLanguage } from "i18next";
+import { changeLanguage, t } from "i18next";
 import Footer from "../components/Footer.astro";
 import NavBar from "../components/NavBar";
 import ProyectCard from "../components/ProyectCard.astro";
 import Layout from "../layouts/Layout.astro";
-import { Info, GraduationCap, FlaskConical, ChevronRight, Sparkles, Menu, } from "lucide-astro";
+import {
+  Info,
+  GraduationCap,
+  FlaskConical,
+  ChevronRight,
+  Sparkles,
+  Menu,
+} from "lucide-astro";
 
 changeLanguage("es");
 
 interface Proyect {
-    image: string;
-    title: string;
-    description: string;
-    link?: string;
-    pills: {
-        text: string;
-        color: string;
-    }[];
+  image: string;
+  title: string;
+  description: string;
+  link?: string;
+  pills: {
+    text: string;
+    color: string;
+  }[];
 }
-const proyectos: Proyect[] = [
-    {
-        image: "/proyectos-images/cloth.png",
-        title: "Farfania Cloth",
-        description: "El Farfania Cloth es una herramienta que permite a los dise\u00F1adores de Farfania crear ropas e incluirlas en el juego.",
-        pills: [
-            { text: "React", color: "blue" },
-            { text: "Tailwind", color: "red" },
-            { text: "Electron.js", color: "green" },
-            { text: "Java", color: "cyan" },
-        ],
-    },
-    {
-        image: "/proyectos-images/farfania-landing.png",
-        title: "Farfania Landing",
-        description: "La p\u00E1gina oficial de Farfania 2, el pa\u00EDs de Farfadox en Minecraft.",
-        link: "https://farfania.com/",
-        pills: [
-            { text: "Astro.js", color: "orange" },
-            { text: "Tailwind", color: "red" },
-            { text: "React", color: "blue" },
-            { text: "Nest.js", color: "yellow" },
-        ],
-    },
-    {
-        image: "/proyectos-images/farfadox-launcher.png",
-        title: "Farfadox Launcher",
-        description: "El launcher oficial de Farfadox, que permite acceder a los servidores de Farfadox.",
-        link: "https://farfania.com/launcher",
-        pills: [
-            { text: "React", color: "blue" },
-            { text: "Tailwind", color: "red" },
-            { text: "Electron.js", color: "orange" },
-            { text: "Nest.js", color: "yellow" },
-        ],
-    },
-    {
-        image: "/proyectos-images/economy-suite.png",
-        title: "Economy Suite",
-        description: "Es la suite de economia de Farfania que permite a los usuarios gestionar sus cuentas de banco, hacer transacciones, etc.",
-        pills: [
-            { text: "Java", color: "cyan" },
-            {
-                text: "SQL",
-                color: "blue",
-            },
-        ],
-    },
-    {
-        image: "/proyectos-images/eyemod-farfania.png",
-        title: "App Contactos",
-        description: "La aplicaci\u00F3n de contactos de Farfania, que permite a los usuarios guardar sus contactos.",
-        pills: [
-            { text: "Java", color: "cyan" },
-            {
-                text: "SQL",
-                color: "blue",
-            },
-        ],
-    },
-    {
-        image: "/proyectos-images/wetalk.png",
-        title: "WeTalk",
-        description: "La applicaci\u00F3n de mensajer\u00EDa instantanea de Farfania, que permite a los usuarios comunicarse entre ellos.",
-        pills: [
-            { text: "Java", color: "cyan" },
-            {
-                text: "SQL",
-                color: "blue",
-            },
-        ],
-    },
-];
+const proyectos: Proyect[] = t("projects_site", { returnObjects: true });
 ---
 
 <Layout title="VeguiDev - Proyectos">
   <main class="text-white">
     <NavBar client:load />
     <section>
-      <h2 class="text-4xl font-bold text-center my-12">Proyectos</h2>
+      <h2 class="text-4xl font-bold text-center my-12">
+        {t("projects")}
+      </h2>
       <div class="relative my-12 mx-4">
         <!-- Divider -->
         <hr class="w-full border-neutral-700" />
@@ -126,22 +63,26 @@ const proyectos: Proyect[] = [
       </section>
     </section>
     <section class="mb-12">
-      <h2 class="text-4xl font-bold text-center my-12">Puede interesarte</h2>
+      <h2 class="text-4xl font-bold text-center my-12">{t("be_interested")}</h2>
       <ul class="flex flex-col items-center text-2xl gap-5">
         <li>
           <a
             class="text-blue-brand hover:underline"
-            href="/sobre-mi#habilidades">Habilidades</a
+            href={t("homeArticle.skills.href")}
+            >{t("homeArticle.skills.title")}</a
           >
         </li>
         <li>
-          <a class="text-blue-brand hover:underline" href="/sobre-mi#formacion"
-            >Formación</a
+          <a
+            class="text-blue-brand hover:underline"
+            href={t("homeArticle.formation.href")}
+            >{t("homeArticle.formation.title")}</a
           >
         </li>
         <li>
-          <a class="text-blue-brand hover:underline" href="/sobre-mi"
-            >Sobre Mi</a
+          <a
+            class="text-blue-brand hover:underline"
+            href={t("homeArticle.info.href")}>{t("aboutMe")}</a
           >
         </li>
       </ul>

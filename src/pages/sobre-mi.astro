@@ -1,5 +1,5 @@
 ---
-import { changeLanguage } from "i18next";
+import { changeLanguage, t } from "i18next";
 import AbilityCard, { type Ability } from "../components/AbilityCard.astro";
 import DiscordProfile from "../components/DiscordProfile.astro";
 import Footer from "../components/Footer.astro";
@@ -9,113 +9,7 @@ import Layout from "../layouts/Layout.astro";
 
 changeLanguage("es");
 
-const abilities: Ability[] = [
-    {
-        title: "React",
-        description: "Framework frontend de JavaScript, utilizado para SPAs (Single Page Applications) reactivas.",
-        logo: "/tech-logos/react.svg",
-    },
-    {
-        title: "Astro",
-        description: "Framework frontend para crear sitios web staticos, con soporte para React, Vue y Svelte.",
-        logo: "/tech-logos/astro.svg",
-    },
-    {
-        title: "TailwindCSS",
-        description: "Framework CSS para crear interfaces de usuario modernas y responsivas.",
-        logo: "/tech-logos/tailwind.png",
-    },
-    {
-        title: "NodeJS",
-        description: "Entorno de ejecuci\u00F3n de JavaScript en el servidor, utilizado para crear APIs y aplicaciones backend.",
-        logo: "/tech-logos/nodejs.png",
-    },
-    {
-        title: "MongoDB",
-        description: "Base de datos NoSQL, orientada a documentos, utilizada para almacenar datos de aplicaciones web.",
-        logo: "/tech-logos/mongodb.png",
-    },
-    {
-        title: "Strapi",
-        description: "CMS (Content Management System) de c\u00F3digo abierto, utilizado para crear APIs REST y GraphQL.",
-        logo: "/tech-logos/strapi.png",
-    },
-    {
-        title: "Nest.js",
-        description: "Framework backend de NodeJS, utilizado para crear APIs REST y GraphQL escalables y mantenibles.",
-        logo: "/tech-logos/nestjs.svg",
-    },
-    {
-        title: "Next.js",
-        description: "Framework frontend de React, utilizado para crear aplicaciones web y sitios web est\u00E1ticos y din\u00E1micos.",
-        logo: "/tech-logos/nextjs.png",
-    },
-    {
-        title: "Express",
-        description: "Framework backend de NodeJS, utilizado para crear APIs REST y aplicaciones web.",
-        logo: "/tech-logos/expressjs.webp",
-    },
-    {
-        title: "Java",
-        description: "Lenguaje de programaci\u00F3n orientado a objetos, utilizado para crear aplicaciones web y m\u00F3viles.",
-        logo: "/tech-logos/java.webp",
-    },
-    {
-        title: "MC Forge",
-        description: "API de modding para Minecraft, utilizada para crear mods y servidores personalizados.",
-        logo: "/tech-logos/forgemc.png",
-    },
-    {
-        title: "MC Spigot/Bukkit",
-        description: "API de desarrollo de plugins para servidores de Minecraft, utilizada para crear plugins personalizados.",
-        logo: "/tech-logos/spigot.webp",
-    },
-    {
-        title: "Mysql/MariaDB",
-        description: "Sistemas de gesti\u00F3n de bases de datos relacionales, utilizados para almacenar datos de aplicaciones web.",
-        logo: "/tech-logos/mysql.png",
-    },
-    {
-        title: "SQLite",
-        description: "Sistema de gesti\u00F3n de bases de datos relacionales, utilizado para almacenar datos de aplicaciones web.",
-        logo: "/tech-logos/sqlite.png",
-    },
-    {
-        title: "Docker",
-        description: "Plataforma de c\u00F3digo abierto para automatizar la implementaci\u00F3n, el escalado y la administraci\u00F3n de aplicaciones en contenedores.",
-        logo: "/tech-logos/docker.webp",
-    },
-    {
-        title: "Git",
-        description: "Sistema de control de versiones distribuido, utilizado para el seguimiento de cambios en el c\u00F3digo fuente de aplicaciones.",
-        logo: "/tech-logos/git.png",
-    },
-    {
-        title: "GitHub",
-        description: "Plataforma de desarrollo colaborativo de software para alojar proyectos utilizando el sistema de control de versiones Git.",
-        logo: "/tech-logos/github.png",
-    },
-    {
-        title: "Vercel",
-        description: "Plataforma de desarrollo y alojamiento de aplicaciones web y sitios web est\u00E1ticos y din\u00E1micos.",
-        logo: "/tech-logos/vercel.png",
-    },
-    {
-        title: "AWS",
-        description: "Plataforma de servicios en la nube, que ofrece servicios de computaci\u00F3n, almacenamiento y redes.",
-        logo: "/tech-logos/aws.png",
-    },
-    {
-        title: "Google Cloud",
-        description: "Plataforma de servicios en la nube, que ofrece servicios de computaci\u00F3n, almacenamiento y redes.",
-        logo: "/tech-logos/googlecloud.png",
-    },
-    {
-        title: "Cloudflare",
-        description: "Plataforma de servicios en la nube, que ofrece servicios de seguridad, rendimiento y redes.",
-        logo: "/tech-logos/cloudflare.png",
-    },
-];
+const abilities: Ability[] = t("abilities", { returnObjects: true });
 ---
 
 <Layout title="VeguiDev - Sobre Mi">
@@ -129,7 +23,7 @@ const abilities: Ability[] = [
     </section>
     <section class="mb-12 mt-12">
       <h2 class="text-3xl font-bold text-center" id="habilidades">
-        Habilidades
+        {t("skills")}
       </h2>
       <div class="relative mt-5 mb-12 mx-4">
         <!-- Divider -->
@@ -143,7 +37,9 @@ const abilities: Ability[] = [
       </section>
     </section>
     <section class="mb-12 mt-12">
-      <h2 class="text-3xl font-bold text-center" id="formacion">Formación</h2>
+      <h2 class="text-3xl font-bold text-center" id="formacion">
+        {t("education")}
+      </h2>
       <div class="relative mt-5 mb-12 mx-4">
         <!-- Divider -->
 
@@ -153,10 +49,10 @@ const abilities: Ability[] = [
         class="mt-12 w-auto items-center grid grid-cols-1 gap-5 md:px-52"
       >
         <article class="bg-neutral-700/20 p-5 rounded">
-          <h3 class="text-sm font-bold mb-2">Actual</h3>
+          <h3 class="text-sm font-bold mb-2">{t("current")}</h3>
           <section class="mt-4">
             <h4 class="text-xl font-medium mb-6">
-              Licenciatura en Gestión de la Tecnologia de la Información -
+              {t("educations.uade_gtts.title")} -
               <a
                 href="https://www.uade.edu.ar/facultad-de-ingenieria-y-ciencias-exactas/licenciatura-en-gestion-de-tecnologia-de-la-informacion/"
                 target="_blank"
@@ -170,15 +66,17 @@ const abilities: Ability[] = [
             <small
               class="inline-block text-sm text-neutral-500 select-none mt-2 max-md:text-center max-md:w-full"
             >
-              Progreso actual de la carrera
+              {t("educations.progress")}
             </small>
           </section>
         </article>
         <article class="bg-neutral-700/20 p-5 rounded">
-          <h3 class="text-sm font-bold text-emerald-500 mb-2">Completada</h3>
+          <h3 class="text-sm font-bold text-emerald-500 mb-2">
+            {t("completed")}
+          </h3>
           <section class="mt-4">
             <h4 class="text-xl font-medium mb-6">
-              Tecnicatura en Multimedios & Secundaria -
+              {t("educations.multimedios.title")} -
               <a
                 href="https://ipadua.edu.ar/multimedios.html"
                 target="_blank"
@@ -192,18 +90,21 @@ const abilities: Ability[] = [
             <small
               class="inline-block text-sm text-neutral-500 select-none mt-2 max-md:text-center max-md:w-full"
             >
-              Progreso total de la carrera
+              {t("educations.progress")}
             </small>
           </section>
         </article>
       </section>
     </section>
     <section class="mb-12">
-      <h2 class="text-4xl font-bold text-center my-12">Puede interesarte</h2>
+      <h2 class="text-4xl font-bold text-center my-12">
+        {t("be_interested")}
+      </h2>
       <ul class="flex flex-col items-center text-2xl gap-5">
         <li>
-          <a class="text-blue-brand hover:underline" href="/proyectos"
-            >Proyectos</a
+          <a
+            class="text-blue-brand hover:underline"
+            href={t("homeArticle.projects.href")}>{t("projects")}</a
           >
         </li>
       </ul>
