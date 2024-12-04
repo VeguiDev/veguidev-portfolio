@@ -1,9 +1,18 @@
 {
   "site": {
-    "description": "I am VeguiDev software developer who can develop the website for your business, the service for your employees or a mod for your Minecraft server."
+    "description": "I am VeguiDev, a software developer who can create a website for your business, a service for your employees, or a mod for your Minecraft server.",
+    "footer": "ALL RIGHTS RESERVED © 2024 by VeguiDev"
+  },
+  "discord": {
+    "about": "ABOUT ME",
+    "aboutContent": "Hi, I'm Juan Manuel, known as VeguiDev, a passionate 19-year-old software developer determined to boost your business by building the solutions you need.",
+    "birthDay": "BIRTHDAY",
+    "birthDayContent": "May 28, 2005",
+    "inputPlaceholder": "Send message to @VeguiDev",
+    "inputSubtext": "Press enter to send the message"
   },
   "home": "Home",
-  "aboutMe": "About me",
+  "aboutMe": "About Me",
   "projects": "Projects",
   "contact": "Contact",
   "skills": "Skills",
@@ -11,9 +20,210 @@
   "softwareDeveloper": "Software Developer",
   "homeArticle": {
     "info": {
-      "title": "Información",
-      "content": "Soy Juan Manuel Menta, desarrollador de software con experiencia en desarrollo web, creación de aplicaciones de escritorio multiplataforma y programación de mods para servidores de Minecraft. Puedo diseñar una página web profesional para tu negocio, crear herramientas internas que optimicen el trabajo de tus empleados o desarrollar mods y plugins que mejoren la experiencia en tu servidor de Minecraft.",
-      "href": "/sobre-mi"
+      "title": "Information",
+      "content": "I am Juan Manuel Menta, a software developer with experience in web development, cross-platform desktop applications, and Minecraft server modding. I can design a professional website for your business, create internal tools to optimize your employees' workflow, or develop mods and plugins to enhance the experience on your Minecraft server.",
+      "href": "/about-me"
+    },
+    "formation": {
+      "title": "Education",
+      "content": "I am a Multimedia Technician, graduated from the San Antonio de Padua Institute, where I gained a solid foundation in audiovisual communication, design, and technology. Currently, I continue my academic training by pursuing a degree in Information Systems Management at UADE.",
+      "href": "/about-me#education"
+    },
+    "projects": {
+      "title": "Projects",
+      "content": "I have worked on a wide range of projects, from creating websites and desktop applications to developing mods and plugins for Minecraft servers. If you are looking for a software developer with experience and passion for their work, you are in the right place!",
+      "href": "/projects"
+    },
+    "skills": {
+      "title": "Skills",
+      "content": "All the technologies and tools I use in my projects with a description of each one. From programming languages to frameworks and libraries.",
+      "href": "/about-me#skills"
     }
+  },
+  "projects_site": [
+    {
+      "image": "/projects-images/cloth.png",
+      "title": "Farfania Cloth",
+      "description": "Farfania Cloth is a tool that allows Farfania designers to create clothing and include it in the game.",
+      "pills": [
+        { "text": "React", "color": "blue" },
+        { "text": "Tailwind", "color": "red" },
+        { "text": "Electron.js", "color": "green" },
+        { "text": "Java", "color": "cyan" }
+      ]
+    },
+    {
+      "image": "/projects-images/farfania-landing.png",
+      "title": "Farfania Landing",
+      "description": "The official website of Farfania 2, Farfadox's country in Minecraft.",
+      "link": "https://farfania.com/",
+      "pills": [
+        { "text": "Astro.js", "color": "orange" },
+        { "text": "Tailwind", "color": "red" },
+        { "text": "React", "color": "blue" },
+        { "text": "Nest.js", "color": "yellow" }
+      ]
+    },
+    {
+      "image": "/projects-images/farfadox-launcher.png",
+      "title": "Farfadox Launcher",
+      "description": "The official Farfadox launcher, allowing access to Farfadox servers.",
+      "link": "https://farfania.com/launcher",
+      "pills": [
+        { "text": "React", "color": "blue" },
+        { "text": "Tailwind", "color": "red" },
+        { "text": "Electron.js", "color": "orange" },
+        { "text": "Nest.js", "color": "yellow" }
+      ]
+    },
+    {
+      "image": "/projects-images/economy-suite.png",
+      "title": "Economy Suite",
+      "description": "The economy suite of Farfania, allowing users to manage their bank accounts, make transactions, etc.",
+      "pills": [
+        { "text": "Java", "color": "cyan" },
+        { "text": "SQL", "color": "blue" }
+      ]
+    },
+    {
+      "image": "/projects-images/eyemod-farfania.png",
+      "title": "Contacts App",
+      "description": "The Farfania contacts app, allowing users to save their contacts.",
+      "pills": [
+        { "text": "Java", "color": "cyan" },
+        { "text": "SQL", "color": "blue" }
+      ]
+    },
+    {
+      "image": "/projects-images/wetalk.png",
+      "title": "WeTalk",
+      "description": "The Farfania instant messaging app, enabling users to communicate with each other.",
+      "pills": [
+        { "text": "Java", "color": "cyan" },
+        { "text": "SQL", "color": "blue" }
+      ]
+    }
+  ],
+  "be_interested": "You may be interested",
+  "abilities": [
+    {
+      "title": "React",
+      "description": "JavaScript frontend framework used for reactive Single Page Applications (SPAs).",
+      "logo": "/tech-logos/react.svg"
+    },
+    {
+      "title": "Astro",
+      "description": "Framework frontend para crear sitios web staticos, con soporte para React, Vue y Svelte.",
+      "logo": "/tech-logos/astro.svg"
+    },
+    {
+      "title": "TailwindCSS",
+      "description": "Framework CSS para crear interfaces de usuario modernas y responsivas.",
+      "logo": "/tech-logos/tailwind.png"
+    },
+    {
+      "title": "NodeJS",
+      "description": "Entorno de ejecuci\u00F3n de JavaScript en el servidor, utilizado para crear APIs y aplicaciones backend.",
+      "logo": "/tech-logos/nodejs.png"
+    },
+    {
+      "title": "MongoDB",
+      "description": "Base de datos NoSQL, orientada a documentos, utilizada para almacenar datos de aplicaciones web.",
+      "logo": "/tech-logos/mongodb.png"
+    },
+    {
+      "title": "Strapi",
+      "description": "CMS (Content Management System) de c\u00F3digo abierto, utilizado para crear APIs REST y GraphQL.",
+      "logo": "/tech-logos/strapi.png"
+    },
+    {
+      "title": "Nest.js",
+      "description": "Framework backend de NodeJS, utilizado para crear APIs REST y GraphQL escalables y mantenibles.",
+      "logo": "/tech-logos/nestjs.svg"
+    },
+    {
+      "title": "Next.js",
+      "description": "Framework frontend de React, utilizado para crear aplicaciones web y sitios web est\u00E1ticos y din\u00E1micos.",
+      "logo": "/tech-logos/nextjs.png"
+    },
+    {
+      "title": "Express",
+      "description": "Framework backend de NodeJS, utilizado para crear APIs REST y aplicaciones web.",
+      "logo": "/tech-logos/expressjs.webp"
+    },
+    {
+      "title": "Java",
+      "description": "Lenguaje de programaci\u00F3n orientado a objetos, utilizado para crear aplicaciones web y m\u00F3viles.",
+      "logo": "/tech-logos/java.webp"
+    },
+    {
+      "title": "MC Forge",
+      "description": "API de modding para Minecraft, utilizada para crear mods y servidores personalizados.",
+      "logo": "/tech-logos/forgemc.png"
+    },
+    {
+      "title": "MC Spigot/Bukkit",
+      "description": "API de desarrollo de plugins para servidores de Minecraft, utilizada para crear plugins personalizados.",
+      "logo": "/tech-logos/spigot.webp"
+    },
+    {
+      "title": "Mysql/MariaDB",
+      "description": "Sistemas de gesti\u00F3n de bases de datos relacionales, utilizados para almacenar datos de aplicaciones web.",
+      "logo": "/tech-logos/mysql.png"
+    },
+    {
+      "title": "SQLite",
+      "description": "Sistema de gesti\u00F3n de bases de datos relacionales, utilizado para almacenar datos de aplicaciones web.",
+      "logo": "/tech-logos/sqlite.png"
+    },
+    {
+      "title": "Docker",
+      "description": "Plataforma de c\u00F3digo abierto para automatizar la implementaci\u00F3n, el escalado y la administraci\u00F3n de aplicaciones en contenedores.",
+      "logo": "/tech-logos/docker.webp"
+    },
+    {
+      "title": "Git",
+      "description": "Sistema de control de versiones distribuido, utilizado para el seguimiento de cambios en el c\u00F3digo fuente de aplicaciones.",
+      "logo": "/tech-logos/git.png"
+    },
+    {
+      "title": "GitHub",
+      "description": "Plataforma de desarrollo colaborativo de software para alojar proyectos utilizando el sistema de control de versiones Git.",
+      "logo": "/tech-logos/github.png"
+    },
+    {
+      "title": "Vercel",
+      "description": "Plataforma de desarrollo y alojamiento de aplicaciones web y sitios web est\u00E1ticos y din\u00E1micos.",
+      "logo": "/tech-logos/vercel.png"
+    },
+    {
+      "title": "AWS",
+      "description": "Plataforma de servicios en la nube, que ofrece servicios de computaci\u00F3n, almacenamiento y redes.",
+      "logo": "/tech-logos/aws.png"
+    },
+    {
+      "title": "Google Cloud",
+      "description": "Plataforma de servicios en la nube, que ofrece servicios de computaci\u00F3n, almacenamiento y redes.",
+      "logo": "/tech-logos/googlecloud.png"
+    },
+    {
+      "title": "Cloudflare",
+      "description": "Plataforma de servicios en la nube, que ofrece servicios de seguridad, rendimiento y redes.",
+      "logo": "/tech-logos/cloudflare.png"
+    }
+  ],
+  "current": "Current",
+  "completed": "Completed",
+  "educations": {
+    "uade_gtts": {
+      "title": "Bachelor's in Information Technology Management"
+    },
+    "progress": "Current degree progress",
+    "start": "Start",
+    "end": "End",
+    "multimedios": {
+      "title": "Multimedia Technician & High School"
+    },
+    "year": "Year"
   }
 }
