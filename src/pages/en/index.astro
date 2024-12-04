@@ -1,10 +1,18 @@
 ---
-import { changeLanguage } from "i18next";
+import i18next, { changeLanguage } from "i18next";
 import Footer from "../../components/Footer.astro";
 import NavBar from "../../components/NavBar";
 import PresentationCard from "../../components/PresentationCard.astro";
 import Layout from "../../layouts/Layout.astro";
-import { Info, GraduationCap, FlaskConical, ChevronRight, Sparkles, Menu, } from "lucide-astro";
+import {
+  Info,
+  GraduationCap,
+  FlaskConical,
+  ChevronRight,
+  Sparkles,
+  Menu,
+} from "lucide-astro";
+import { getAbsoluteLocaleUrl } from "astro:i18n";
 
 changeLanguage("en");
 ---
@@ -27,7 +35,7 @@ changeLanguage("en");
           class="rounded-full pulse flex justify-center items-center mb-5 w-40 h-40 border-2 border-neutral-700 relative before:absolute before:w-48 before:h-48 before:opacity-70 before:rounded-full before:border before:border-neutral-700 after:absolute after:w-96 after:h-96 after:opacity-20 after:rounded-full after:border after:border-neutral-700/80"
         >
           <img
-            src="./foto.png"
+            src="/foto.png"
             class="w-40 h-40 object-cover rounded-full"
             alt="Juan Manuel Menta foto"
           />
@@ -45,7 +53,11 @@ changeLanguage("en");
       <!-- Articles -->
 
       <section class="grid md:grid-cols-2 gap-5 w-[95%] mx-auto mb-12">
-        <PresentationCard icon={Info} title="Información" link="/sobre-mi">
+        <PresentationCard
+          icon={Info}
+          title="Información"
+          link={getAbsoluteLocaleUrl(i18next.language, "/sobre-mi")}
+        >
           Soy Juan Manuel Menta, desarrollador de software con experiencia en
           desarrollo web, creación de aplicaciones de escritorio multiplataforma
           y programación de mods para servidores de Minecraft. Puedo diseñar una
@@ -56,7 +68,7 @@ changeLanguage("en");
         <PresentationCard
           icon={GraduationCap}
           title="Formación"
-          link="/sobre-mi#formacion"
+          link={getAbsoluteLocaleUrl(i18next.language, "/sobre-mi#educacion")}
         >
           Soy técnico en Multimedios, egresado del Instituto San Antonio de
           Padua, donde adquirí una sólida base en comunicación audiovisual,
@@ -67,7 +79,7 @@ changeLanguage("en");
         <PresentationCard
           icon={FlaskConical}
           title="Proyectos"
-          link="/proyectos"
+          link={getAbsoluteLocaleUrl(i18next.language, "/proyectos")}
         >
           He trabajado en una gran variedad de proyectos, desde la creación de
           sitios web y aplicaciones de escritorio hasta el desarrollo de mods y
@@ -79,7 +91,7 @@ changeLanguage("en");
         <PresentationCard
           icon={Sparkles}
           title="Habilidades"
-          link="/sobre-mi#habilidades"
+          link={getAbsoluteLocaleUrl(i18next.language, "/sobre-mi#habilidades")}
         >
           Todas las tecnologías y herramientas que utilizo en mis proyectos con
           una descripción de cada una. Desde lenguajes de programación hasta

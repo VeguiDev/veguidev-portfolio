@@ -4,14 +4,7 @@ import Footer from "../components/Footer.astro";
 import NavBar from "../components/NavBar";
 import PresentationCard from "../components/PresentationCard.astro";
 import Layout from "../layouts/Layout.astro";
-import {
-  Info,
-  GraduationCap,
-  FlaskConical,
-  ChevronRight,
-  Sparkles,
-  Menu,
-} from "lucide-astro";
+import { Info, GraduationCap, FlaskConical, Sparkles } from "lucide-astro";
 
 changeLanguage("es");
 ---
@@ -61,35 +54,25 @@ changeLanguage("es");
         </PresentationCard>
         <PresentationCard
           icon={GraduationCap}
-          title="Formación"
-          link="/sobre-mi#formacion"
+          title={t("homeArticle.formation.title")}
+          link={t("homeArticle.formation.href")}
         >
-          Soy técnico en Multimedios, egresado del Instituto San Antonio de
-          Padua, donde adquirí una sólida base en comunicación audiovisual,
-          diseño y tecnología. Actualmente, continúo mi formación académica
-          cursando la Licenciatura en Gestión de los Sistemas de la Información
-          en la UADE.
+          {t("homeArticle.formation.content")}
         </PresentationCard>
         <PresentationCard
           icon={FlaskConical}
-          title="Proyectos"
-          link="/proyectos"
+          title={t("homeArticle.projects.title")}
+          link={t("homeArticle.projects.href")}
         >
-          He trabajado en una gran variedad de proyectos, desde la creación de
-          sitios web y aplicaciones de escritorio hasta el desarrollo de mods y
-          plugins para servidores de Minecraft. Si estás buscando un
-          desarrollador de software con experiencia y pasión por su trabajo,
-          ¡estás en el lugar correcto!
+          {t("homeArticle.projects.content")}
         </PresentationCard>
 
         <PresentationCard
           icon={Sparkles}
-          title="Habilidades"
-          link="/sobre-mi#habilidades"
+          title={t("homeArticle.skills.title")}
+          link={t("homeArticle.skills.href")}
         >
-          Todas las tecnologías y herramientas que utilizo en mis proyectos con
-          una descripción de cada una. Desde lenguajes de programación hasta
-          frameworks y librerías.
+          {t("homeArticle.skills.content")}
         </PresentationCard>
       </section>
     </section>

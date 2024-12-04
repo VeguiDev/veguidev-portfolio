@@ -1,6 +1,7 @@
 {
   "site": {
-    "description": "Soy VeguiDev un desarrollador de software que puede desarrollar la página para tu negocio, el servicio para tus empleados o un mod para tu server de Minecraft."
+    "description": "Soy VeguiDev un desarrollador de software que puede desarrollar la página para tu negocio, el servicio para tus empleados o un mod para tu server de Minecraft.",
+    "footer": "TODOS LOS DERECHOS RESERVADOS © 2024 by VeguiDev"
   },
   "home": "Inicio",
   "aboutMe": "Sobre mí",
@@ -14,6 +15,21 @@
       "title": "Información",
       "content": "Soy Juan Manuel Menta, desarrollador de software con experiencia en desarrollo web, creación de aplicaciones de escritorio multiplataforma y programación de mods para servidores de Minecraft. Puedo diseñar una página web profesional para tu negocio, crear herramientas internas que optimicen el trabajo de tus empleados o desarrollar mods y plugins que mejoren la experiencia en tu servidor de Minecraft.",
       "href": "/sobre-mi"
+    },
+    "formation": {
+      "title": "Formación",
+      "content": "Soy técnico en Multimedios, egresado del Instituto San Antonio de Padua, donde adquirí una sólida base en comunicación audiovisual, diseño y tecnología. Actualmente, continúo mi formación académica cursando la Licenciatura en Gestión de los Sistemas de la Información en la UADE.",
+      "href": "/sobre-mi#formacion"
+    },
+    "projects": {
+      "title": "Proyectos",
+      "content": "He trabajado en una gran variedad de proyectos, desde la creación de sitios web y aplicaciones de escritorio hasta el desarrollo de mods y plugins para servidores de Minecraft. Si estás buscando un desarrollador de software con experiencia y pasión por su trabajo, ¡estás en el lugar correcto!",
+      "href": "/proyectos"
+    },
+    "skills": {
+      "title": "Habilidades",
+      "content": "Todas las tecnologías y herramientas que utilizo en mis proyectos con una descripción de cada una. Desde lenguajes de programación hasta frameworks y librerías.",
+      "href": "/sobre-mi#habilidades"
     }
   }
 }
