@@ -1,3 +1,8 @@
+---
+import { Link } from "lucide-astro";
+import { t } from "i18next";
+---
+
 <div class="bg-gray-800/20 backdrop-blur max-sm:w-full w-96 rounded-xl h-auto">
   <div class="bg-gray-200/50 rounded-t-xl w-full h-40"></div>
   <div class="p-5">
@@ -9,7 +14,7 @@
       >
         <div class="overflow-hidden w-full h-full rounded-full">
           <img
-            src="./foto.png"
+            src="/foto.png"
             class="w-full h-full object-cover"
             alt="VeguiDev profile discord"
           />
@@ -32,6 +37,16 @@
             <img src="/farfadox-iso.svg" alt="" />
           </div>
         </li>
+        <li class="group relative flex justify-center items-center">
+          <span
+            class="absolute translate-y-10 opacity-0 scale-0 group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0 -top-10 transition-all duration-200 bg-gray-900 p-1 w-32 rounded font-bold text-center z-20"
+          >
+            Spreen Studios
+          </span>
+          <div class="w-6">
+            <img src="/spreen-studio-icon.png" alt="" />
+          </div>
+        </li>
       </ul>
     </section>
     <section class="bg-gray-900 mt-4 rounded-xl pt-3 pb-3 pl-4 pr-4">
@@ -44,16 +59,14 @@
       <hr class="mt-4 mb-4 border-gray-500" />
       <article>
         <section class="text-white">
-          <h2 class="text-sm font-bold">SOBRE MÍ</h2>
+          <h2 class="text-sm font-bold">{t("discord.about")}</h2>
           <p class="text-[0.85rem] mt-1">
-            Hola, soy Juan Manuel, conocido como VeguiDev, un apasionado
-            desarrollador de software de 19 años con la determinación de
-            impulsar tu negocio construyendo las soluciones que necesitas.
+            {t("discord.aboutContent")}
           </p>
         </section>
         <section class="text-white mt-4">
-          <h2 class="text-sm font-bold">FECHA DE NACIMIENTO</h2>
-          <p class="text-[0.85rem] mt-1">28 de mayo, 2005</p>
+          <h2 class="text-sm font-bold">{t("discord.birthDay")}</h2>
+          <p class="text-[0.85rem] mt-1">{t("discord.birthDayContent")}</p>
         </section>
       </article>
       <hr class="mt-4 mb-4 border-gray-500" />
@@ -65,10 +78,10 @@
             rel="noopener noreferrer"
             class="flex space-x-2 items-center justify-start border-[0.05rem] border-gray-500 p-2 rounded w-2/3"
           >
-            <i class="text-2xl mr-1 fa-brands fa-github"></i>
+            <img src="/github-mark-white.svg" class="w-8" alt="Github Logo" />
             <div class="text-md font-bold flex-1">veguidev</div>
             <div class="ml-auto">
-              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              <Link />
             </div>
           </a>
           <a
@@ -77,10 +90,10 @@
             rel="noopener noreferrer"
             class="flex space-x-2 items-center justify-start border-[0.05rem] border-gray-500 p-2 rounded w-2/3"
           >
-            <i class="text-2xl mr-1 fa-brands fa-twitter text-[#00acee]"></i>
+            <img src="/icons8-twitterx.svg" class="w-8" alt="Twitter Logo" />
             <div class="text-md font-bold flex-1">veguidev</div>
             <div class="ml-auto">
-              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              <Link />
             </div>
           </a>
         </section>
@@ -90,11 +103,11 @@
         <input
           class="w-full bg-gray-900 p-2 border-gray-500 text-gray-400 border-solid border-[0.05rem] rounded-[0.2rem] focus:outline-none placeholder:text-gray-500"
           type="text"
-          placeholder="Enviar mensaje a @VeguiDev"
+          placeholder={t("discord.inputPlaceholder")}
           id="msg"
         />
         <small class="text-xs text-gray-500 select-none">
-          Presioná enter para enviar el mensaje
+          {t("discord.inputSubtext")}
         </small>
       </article>
     </section>

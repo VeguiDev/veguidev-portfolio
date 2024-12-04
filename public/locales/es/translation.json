@@ -3,6 +3,14 @@
     "description": "Soy VeguiDev un desarrollador de software que puede desarrollar la página para tu negocio, el servicio para tus empleados o un mod para tu server de Minecraft.",
     "footer": "TODOS LOS DERECHOS RESERVADOS © 2024 by VeguiDev"
   },
+  "discord": {
+    "about": "SOBRE MÍ",
+    "aboutContent": "Hola, soy Juan Manuel, conocido como VeguiDev, un apasionado desarrollador de software de 19 años con la determinación de impulsar tu negocio construyendo las soluciones que necesitas.",
+    "birthDay": "FECHA DE NACIMIENTO",
+    "birthDayContent": "28 de mayo, 2005",
+    "inputPlaceholder": "Enviar mensaje a @VeguiDev",
+    "inputSubtext": "Presioná enter para enviar el mensaje"
+  },
   "home": "Inicio",
   "aboutMe": "Sobre mí",
   "projects": "Proyectos",
