@@ -7,10 +7,10 @@ import Layout from "../../layouts/Layout.astro";
 ---
 
 <Layout title="VeguiDev - Contacto">
-  <main class="text-white">
-    <NavBar client:load />
+  <NavBar client:load />
+  <main>
     <section>
-      <h2 class="text-4xl font-bold text-center my-12">Contacto</h2>
+      <h2 class="text-4xl font-bold text-center my-12">{t("contact")}</h2>
       <div class="relative my-12 mx-4">
         <!-- Divider -->
         <hr class="w-full border-neutral-700" />
@@ -33,20 +33,20 @@ import Layout from "../../layouts/Layout.astro";
           />
         </div>
         <div class="flex flex-col">
-          <label for="subject" class="select-none mb-1">Subject</label>
+          <label for="subject" class="select-none mb-1">Asunto</label>
           <input
             type="text"
             class="p-1 text-white px-2 rounded hover:bg-neutral-500 focus:outline-none shadow focus:outline focus:outline-blue-brand/20 transition-all duration-150 bg-neutral-600"
-            placeholder="Subject . . ."
+            placeholder="Asunto . . ."
             id="subject"
             required
           />
         </div>
         <div class="flex flex-col">
-          <label for="msg" class="select-none mb-1">Message</label>
+          <label for="msg" class="select-none mb-1">Mensaje</label>
           <textarea
             class="p-1 text-white px-2 rounded hover:bg-neutral-500 focus:outline-none shadow focus:outline focus:outline-blue-brand/20 transition-all duration-150 bg-neutral-600 resize-none"
-            placeholder="Message . . ."
+            placeholder="Mensaje . . ."
             rows="5"
             required
             id="msg"></textarea>
@@ -56,44 +56,38 @@ import Layout from "../../layouts/Layout.astro";
           type="submit"
           id="submit"
         >
-          Send
+          Enviar
         </button>
       </form>
     </section>
     <section class="mb-12">
-      <h2 class="text-4xl font-bold text-center my-12">{t("be_interested")}</h2>
+      <h2 class="text-4xl font-bold text-center my-12">Puede interesarte</h2>
       <ul class="flex flex-col items-center text-2xl gap-5">
         <li>
           <a
             class="text-blue-brand hover:underline"
-            href={t("homeArticle.skills.href")}
-          >
-            {t("homeArticle.skills.title")}
-          </a>
-        </li>
-        <li>
-          <a
-            class="text-blue-brand hover:underline"
-            href={t("homeArticle.formation.href")}
-            >{t("homeArticle.formation.title")}</a
+            href="/sobre-mi#habilidades">Habilidades</a
           >
         </li>
         <li>
-          <a
-            class="text-blue-brand hover:underline"
-            href={t("homeArticle.info.href")}>{t("aboutMe")}</a
+          <a class="text-blue-brand hover:underline" href="/sobre-mi#formacion"
+            >Formación</a
           >
         </li>
         <li>
-          <a
-            class="text-blue-brand hover:underline"
-            href={t("homeArticle.projects.href")}>{t("projects")}</a
+          <a class="text-blue-brand hover:underline" href="/sobre-mi"
+            >Sobre Mi</a
+          >
+        </li>
+        <li>
+          <a class="text-blue-brand hover:underline" href="/proyectos"
+            >Proyectos</a
           >
         </li>
       </ul>
     </section>
-    <Footer />
   </main>
+  <Footer />
 
   <style>
     main {

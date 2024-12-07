@@ -8,8 +8,8 @@ import { Info, GraduationCap, FlaskConical, Sparkles } from "lucide-astro";
 ---
 
 <Layout title={`VeguiDev - ${t("softwareDeveloper")}`}>
-  <main class="text-white">
-    <NavBar client:load />
+  <NavBar client:load />
+  <main>
     <section>
       <article
         class="flex flex-col text-xl justify-center items-center my-32 mx-4"
@@ -74,8 +74,8 @@ import { Info, GraduationCap, FlaskConical, Sparkles } from "lucide-astro";
         </PresentationCard>
       </section>
     </section>
-    <Footer />
   </main>
+  <Footer />
 
   <style>
     main {

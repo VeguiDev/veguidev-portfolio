@@ -11,8 +11,8 @@ const abilities: Ability[] = t("abilities", { returnObjects: true });
 ---
 
 <Layout title="VeguiDev - Sobre Mi">
-  <main class="text-white">
-    <NavBar client:load />
+  <NavBar client:load />
+  <main>
     <section class="relative flex justify-center">
       <span class="w-full h-full absolute right-0 top-0 degradado2"> </span>
       <section class="mt-20 mb-20 px-5 md:px-0">
@@ -107,8 +107,8 @@ const abilities: Ability[] = t("abilities", { returnObjects: true });
         </li>
       </ul>
     </section>
-    <Footer />
   </main>
+  <Footer />
 
   <style>
     main {
