@@ -20,10 +20,14 @@ export default function LenguajeSwitch() {
     if (lng === i18n.language) return;
 
     if (lng === "es") {
-      path = path.replace("/en", "");
+      path = "/";
     }
 
-    window.location.replace(getAbsoluteLocaleUrl(lng, path));
+    if (lng == "en") {
+      path = "/en";
+    }
+
+    window.location.href = path;
   };
 
   return (

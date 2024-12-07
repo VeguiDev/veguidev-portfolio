@@ -8,8 +8,8 @@ import {
 import { useEffect, useState } from "react";
 import LenguajeSwitch from "./LanguajeSwitch";
 import i18next from "i18next";
-import { getAbsoluteLocaleUrl, getLocaleByPath } from "astro:i18n";
 import { useTranslation } from "react-i18next";
+import { getAbsoluteLocaleUrl } from "astro:i18n";
 
 export default function NavBar() {
   const { t } = useTranslation();
