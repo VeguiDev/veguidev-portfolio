@@ -2,6 +2,14 @@
 export default {
   defaultLocale: "es",
   locales: ["en", "es"],
+  routes: {
+    en: {
+      "/": "/en",
+      "/sobre-mi": "/en/about-me",
+      "/contacto": "/en/contact",
+      "/proyectos": "/en/projects",
+    },
+  },
   load: ["server", "client"],
   i18nextServer: {
     debug: true,
