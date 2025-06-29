@@ -1,7 +1,7 @@
 ---
 import i18next, { t, changeLanguage } from "i18next";
 import { Trans, HeadHrefLangs } from "astro-i18next/components";
-
+import Analytics from "@vercel/analytics/astro";
 interface Props {
   title: string;
 }
@@ -35,6 +35,7 @@ changeLanguage(Astro.currentLocale);
   </head>
   <body class="text-white">
     <slot />
+    <Analitics />
   </body>
 </html>
 <style is:global>
