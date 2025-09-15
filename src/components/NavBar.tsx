@@ -42,7 +42,7 @@ export default function NavBar() {
       }`}
     >
       <a href={getAbsoluteLocaleUrl(i18next.language, "/")}>
-        <img src="/logo.png" alt="VeguiDev logo" className="w-12 h-12" />
+        <img src="/logo.webp" alt="VeguiDev logo" className="w-12 h-12" />
       </a>
       <button onClick={() => setIsOpen(!isOpen)} className="ml-auto md:hidden">
         {isOpen ? <XIcon /> : <MenuIcon />}
