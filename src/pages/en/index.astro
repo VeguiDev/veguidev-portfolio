@@ -5,10 +5,9 @@ import NavBar from "../../components/NavBar";
 import PresentationCard from "../../components/PresentationCard.astro";
 import Layout from "../../layouts/Layout.astro";
 import { Info, GraduationCap, FlaskConical, Sparkles } from "lucide-astro";
-changeLanguage("en");
 ---
 
-<Layout title={`VeguiDev - ${t("softwareDeveloper")}`}>
+<Layout titleKey="softwareDeveloper">
   <NavBar client:load />
   <main>
     <section>

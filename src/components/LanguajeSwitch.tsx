@@ -2,32 +2,17 @@ import Flag from "./Flag";
 import { ChevronDownIcon } from "lucide-react";
 import { useEffect, useState } from "react";
 import i18next from "i18next";
-import {
-  getAbsoluteLocaleUrl,
-  getLocaleByPath,
-  getRelativeLocaleUrl,
-} from "astro:i18n";
+import { localizePath, getCurrentLocale } from "@veguidev/astro-i18next";
 
 export default function LenguajeSwitch() {
   const [open, setopen] = useState(false);
   const i18n = i18next;
-  const locale = i18n.language;
-  const lngs = ["es", "en"];
+  const locale = i18n.language || getCurrentLocale();
 
   const changeLanguage = (lng: string) => {
-    let path = window.location.pathname;
-
-    if (lng === i18n.language) return;
-
-    if (lng === "es") {
-      path = "/";
-    }
-
-    if (lng == "en") {
-      path = "/en";
-    }
-
-    window.location.href = path;
+    if (!lng || lng === i18n.language) return;
+    const next = localizePath(window.location.pathname, lng);
+    window.location.href = next;
   };
 
   return (
@@ -53,7 +38,7 @@ export default function LenguajeSwitch() {
             : "translate-y-0 scale-0 opacity-0 pointer-events-none"
         }`}
       >
-        {i18n.languages
+        {(i18n.languages || ["es", "en"])
           .filter((ln) => ln != locale)
           .map((lng) => (
             <section

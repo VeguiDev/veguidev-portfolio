@@ -4,9 +4,6 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-overrides:
-  @veguidev/astro-i18next: link:../../Users/menta/AppData/Local/pnpm/global/5/node_modules/@veguidev/astro-i18next
-
 importers:
 
   .:
@@ -26,9 +23,9 @@ importers:
       '@types/react-dom':
         specifier: ^18.3.0
         version: 18.3.7(@types/react@18.3.24)
-      '@veguidev/@veguidev/astro-i18next':
-        specifier: ^1.0.2
-        version: 1.0.2(astro@4.16.19(rollup@4.50.2)(typescript@5.9.2))(typescript@5.9.2)
+      '@veguidev/astro-i18next':
+        specifier: ^1.0.5
+        version: 1.0.5(astro@4.16.19(rollup@4.50.2)(typescript@5.9.2))(typescript@5.9.2)
       '@vercel/analytics':
         specifier: ^1.5.0
         version: 1.5.0(react@18.3.1)
@@ -723,8 +720,8 @@ packages:
   '@ungap/structured-clone@1.3.0':
     resolution: {integrity: sha512-WmoN8qaIAo7WTYWbAZuG8PYEhn5fkz7dZrqTBZ7dtt//lL2Gwms1IcnQ5yHqjDfX8Ft5j4YzDM23f87zBfDe9g==}
 
-  '@veguidev/@veguidev/astro-i18next@1.0.2':
-    resolution: {integrity: sha512-QCn0g/gh9JHomVA/hpolOT/adn6etLVt3Ji6r5tE73FYcSjRODoE4Op2WMNyqtAMo2eFdUvDG7TdCTvh+bzdnA==}
+  '@veguidev/astro-i18next@1.0.5':
+    resolution: {integrity: sha512-Awmn4Dxip3Mq9lFg5BzUUjq2mXg9yRzHawwRtyu3r4PAVPKtB5S6Y6mwkz7BVX4bsthCbeGiBNDwQYyNyP0pQg==}
     hasBin: true
     peerDependencies:
       astro: '>=1.0.0'
@@ -3013,12 +3010,12 @@ snapshots:
 
   '@ungap/structured-clone@1.3.0': {}
 
-  '@veguidev/@veguidev/astro-i18next@1.0.2(astro@4.16.19(rollup@4.50.2)(typescript@5.9.2))(typescript@5.9.2)':
+  '@veguidev/astro-i18next@1.0.5(astro@4.16.19(rollup@4.50.2)(typescript@5.9.2))(typescript@5.9.2)':
     dependencies:
       '@proload/core': 0.3.3
       '@proload/plugin-tsm': 0.2.1(@proload/core@0.3.3)
+      '@veguidev/astro-i18next': link:../../repos/astro-i18next
       astro: 4.16.19(rollup@4.50.2)(typescript@5.9.2)
-      @veguidev/astro-i18next: link:../../Users/menta/AppData/Local/pnpm/global/5/node_modules/@veguidev/astro-i18next
       i18next: 25.6.0(typescript@5.9.2)
       i18next-browser-languagedetector: 8.2.0
       i18next-fs-backend: 2.6.0

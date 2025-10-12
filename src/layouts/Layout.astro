@@ -3,15 +3,17 @@ import i18next, { t, changeLanguage } from "i18next";
 import { Trans, HeadHrefLangs } from "@veguidev/astro-i18next/components";
 import Analytics from "@vercel/analytics/astro";
 interface Props {
-  title: string;
+  title?: string;
+  titleKey?: string;
 }
 
-const { title } = Astro.props;
+const { title, titleKey } = Astro.props;
+// Set SSR i18next language to match the current route locale
 changeLanguage(Astro.currentLocale);
 ---
 
 <!doctype html>
-<html lang={i18next.language}>
+<html lang={Astro.currentLocale}>
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={t("site.description")} />
@@ -30,7 +32,9 @@ changeLanguage(Astro.currentLocale);
       rel="stylesheet"
     />
     <link rel="manifest" href="/manifest.json" />
-    <title>{title}</title>
+    <title>
+      {title ?? `VeguiDev - ${titleKey ? t(titleKey) : t("softwareDeveloper")}`}
+    </title>
     <HeadHrefLangs />
   </head>
   <body class="text-white">
