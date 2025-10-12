@@ -720,9 +720,9 @@ array-iterate@^2.0.0:
   resolved "https://registry.npmjs.org/array-iterate/-/array-iterate-2.0.1.tgz"
   integrity sha512-I1jXZMjAgCMmxT4qxXfPXa6SthSoE8h6gkSI9BGGNv8mP8G/v0blc+qFnZu6K42vTOiuME596QaLO0TP3Lk0xg==
 
-astro-i18next@^1.0.0-beta.21:
+@veguidev/astro-i18next@^1.0.0-beta.21:
   version "1.0.0-beta.21"
-  resolved "https://registry.npmjs.org/astro-i18next/-/astro-i18next-1.0.0-beta.21.tgz"
+  resolved "https://registry.npmjs.org/@veguidev/astro-i18next/-/@veguidev/astro-i18next-1.0.0-beta.21.tgz"
   integrity sha512-1YPqwexumHpK/d9afEoi52CBFTu6k4MYv/oHjsaAasZDvFClU6U5VPttC/OgZcXRYggCM6ee2LOnyHqlmXOeLA==
   dependencies:
     "@proload/core" "^0.3.3"

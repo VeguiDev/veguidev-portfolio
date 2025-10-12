@@ -8,6 +8,7 @@ import {
 import { useEffect, useState } from "react";
 import LenguajeSwitch from "./LanguajeSwitch";
 import i18next from "i18next";
+import { getCurrentLocale } from "@veguidev/astro-i18next";
 import { useTranslation } from "react-i18next";
 import { getAbsoluteLocaleUrl } from "astro:i18n";
 
@@ -19,6 +20,7 @@ export default function NavBar() {
 
   useEffect(() => {
     const handleScroll = () => {
+      console.log("scrollY", window.scrollY);
       if (window.scrollY > 50) {
         setOnTop(false);
       } else {
@@ -41,7 +43,7 @@ export default function NavBar() {
           : "bg-neutral-900 md:bg-neutral-900/70 md:backdrop-blur"
       }`}
     >
-      <a href={getAbsoluteLocaleUrl(i18next.language, "/")}>
+      <a href={getAbsoluteLocaleUrl(getCurrentLocale(), "/")}>
         <img src="/logo.webp" alt="VeguiDev logo" className="w-12 h-12" />
       </a>
       <button onClick={() => setIsOpen(!isOpen)} className="ml-auto md:hidden">
