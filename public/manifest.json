@@ -3,11 +3,6 @@
   "name": "VeguiDev Portfolio",
   "icons": [
     {
-      "src": "/logo192x192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
       "src": "/logo512x512.png",
       "sizes": "512x512",
       "type": "image/png"
