@@ -12,6 +12,7 @@ export default function LenguajeSwitch() {
   const changeLanguage = (lng: string) => {
     if (!lng || lng === i18n.language) return;
     const next = localizePath(window.location.pathname, lng);
+
     window.location.href = next;
   };
 

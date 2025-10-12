@@ -4,10 +4,9 @@ export default {
   locales: ["en", "es"],
   routes: {
     en: {
-      "/": "/en",
-      "/sobre-mi": "/en/about-me",
-      "/contacto": "/en/contact",
-      "/proyectos": "/en/projects",
+      "sobre-mi": "about-me",
+      contacto: "contact",
+      proyectos: "projects",
     },
   },
   load: ["server", "client"],
