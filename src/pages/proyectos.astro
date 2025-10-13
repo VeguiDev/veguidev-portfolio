@@ -17,7 +17,9 @@ interface Proyect {
     color: string;
   }[];
 }
-const proyectos: Proyect[] = t("projects_site", { returnObjects: true });
+const trans = t("projects_site", { returnObjects: true });
+
+const proyectos: Proyect[] = Array.isArray(trans) ? trans : [];
 ---
 
 <Layout title="VeguiDev - Proyectos">
