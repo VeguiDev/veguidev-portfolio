@@ -4,7 +4,7 @@ import react from "@astrojs/react";
 import astroI18next from "@veguidev/astro-i18next";
 import i18nextConfig from "./astro-i18next.config.mjs";
 
-import vercel from "@astrojs/vercel/serverless";
+import vercel from "@astrojs/vercel";
 
 // https://astro.build/config
 export default defineConfig({
