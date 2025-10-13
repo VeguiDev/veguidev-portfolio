@@ -12,7 +12,7 @@ export default defineConfig({
   build: {
     assetsPrefix: "/",
   },
-  output: "hybrid",
+  output: "server",
   adapter: vercel(),
   i18n: {
     locales: ["en", "es"],
