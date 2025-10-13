@@ -10,6 +10,9 @@
     "preview": "astro preview",
     "astro": "astro"
   },
+  "engines": {
+    "node": ">=22"
+  },
   "dependencies": {
     "@astrojs/react": "^3.6.3",
     "@astrojs/tailwind": "^5.1.5",
