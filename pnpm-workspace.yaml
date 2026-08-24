@@ -1,3 +1,6 @@
 onlyBuiltDependencies:
   - esbuild
   - sharp
+
+overrides:
+  "@veguidev/astro-i18next@1.0.6>@veguidev/astro-i18next": "-"

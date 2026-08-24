@@ -50,70 +50,50 @@
       "href": "/en/about-me#skills"
     }
   },
-  "projects_site": [
-    {
-      "image": "/proyectos-images/cloth.png",
-      "title": "Farfania Cloth",
-      "description": "Farfania Cloth is a tool that allows Farfania designers to create clothing and include it in the game.",
-      "pills": [
-        { "text": "React", "color": "blue" },
-        { "text": "Tailwind", "color": "red" },
-        { "text": "Electron.js", "color": "green" },
-        { "text": "Java", "color": "cyan" }
-      ]
-    },
-    {
-      "image": "/proyectos-images/farfania-landing.png",
-      "title": "Farfania Landing",
-      "description": "The official website of Farfania 2, Farfadox's country in Minecraft.",
-      "link": "https://farfania.com/",
-      "pills": [
-        { "text": "Astro.js", "color": "orange" },
-        { "text": "Tailwind", "color": "red" },
-        { "text": "React", "color": "blue" },
-        { "text": "Nest.js", "color": "yellow" }
-      ]
-    },
-    {
-      "image": "/proyectos-images/farfadox-launcher.png",
-      "title": "Farfadox Launcher",
-      "description": "The official Farfadox launcher, allowing access to Farfadox servers.",
-      "link": "https://farfania.com/launcher",
-      "pills": [
-        { "text": "React", "color": "blue" },
-        { "text": "Tailwind", "color": "red" },
-        { "text": "Electron.js", "color": "orange" },
-        { "text": "Nest.js", "color": "yellow" }
-      ]
-    },
-    {
-      "image": "/proyectos-images/economy-suite.png",
-      "title": "Economy Suite",
-      "description": "The economy suite of Farfania, allowing users to manage their bank accounts, make transactions, etc.",
-      "pills": [
-        { "text": "Java", "color": "cyan" },
-        { "text": "SQL", "color": "blue" }
-      ]
-    },
-    {
-      "image": "/proyectos-images/eyemod-farfania.png",
-      "title": "Contacts App",
-      "description": "The Farfania contacts app, allowing users to save their contacts.",
-      "pills": [
-        { "text": "Java", "color": "cyan" },
-        { "text": "SQL", "color": "blue" }
-      ]
-    },
-    {
-      "image": "/proyectos-images/wetalk.png",
-      "title": "WeTalk",
-      "description": "The Farfania instant messaging app, enabling users to communicate with each other.",
-      "pills": [
-        { "text": "Java", "color": "cyan" },
-        { "text": "SQL", "color": "blue" }
-      ]
+  "project": {
+    "meta": {
+      "masivo": {
+        "name": "MasivoSMP",
+        "description": "A large-scale Minecraft project focused on custom gameplay, performance, and original content, powered by an ecosystem of custom systems and tools."
+      },
+      "vcontext": {
+        "name": "VContext",
+        "description": "A context management system for software development and AI agents, designed to preserve project knowledge, tasks, changes, snapshots, and Git state across development sessions."
+      },
+      "san-pedro": {
+        "name": "Instituto San Pedro",
+        "description": "The institutional website of Instituto San Pedro, designed to provide students, families, and visitors with a modern and accessible way to explore the institution and its educational programs."
+      },
+      "legado-social": {
+        "name": "Legado Social",
+        "description": "The landing page for Legado Social, a marketing venture, built to present its services, identity, and value proposition through a modern digital experience."
+      },
+      "farfania-cloth": {
+        "name": "Farfania Cloth",
+        "description": "An internal tool that allows Farfania designers to create, configure, and integrate custom clothing directly into the game."
+      },
+      "farfania-landing": {
+        "name": "Farfania Landing",
+        "description": "The official website of Farfania 2, Farfadox's Minecraft nation, created to showcase the project, its identity, and its community."
+      },
+      "farfadox-launcher": {
+        "name": "Farfadox Launcher",
+        "description": "The official Farfadox launcher, designed to simplify access to his Minecraft servers and provide players with a dedicated entry point to the ecosystem."
+      },
+      "economy-suite": {
+        "name": "Economy Suite",
+        "description": "Farfania's financial platform, allowing players to manage bank accounts, transfer funds, review transactions, and interact with the in-game economy."
+      },
+      "contacts-app": {
+        "name": "Contacts App",
+        "description": "Farfania's contact management application, allowing users to organize and manage their personal contacts within the platform."
+      },
+      "wetalk": {
+        "name": "WeTalk",
+        "description": "Farfania's instant messaging application, designed to let users communicate privately and stay connected within the ecosystem."
+      }
     }
-  ],
+  },
   "be_interested": "You may be interested",
   "abilities": [
     {

@@ -3,23 +3,12 @@ import { changeLanguage, t } from "i18next";
 import Footer from "../components/Footer.astro";
 import NavBar from "../components/NavBar";
 import ProyectCard from "../components/ProyectCard.astro";
+import { translateProjects } from "../data/projects";
 import Layout from "../layouts/Layout.astro";
 
 changeLanguage("es");
 
-interface Proyect {
-  image: string;
-  title: string;
-  description: string;
-  link?: string;
-  pills: {
-    text: string;
-    color: string;
-  }[];
-}
-const trans = t("projects_site", { returnObjects: true });
-
-const proyectos: Proyect[] = Array.isArray(trans) ? trans : [];
+const proyectos = translateProjects(t);
 ---
 
 <Layout title="VeguiDev - Proyectos">
@@ -38,7 +27,7 @@ const proyectos: Proyect[] = Array.isArray(trans) ? trans : [];
 
     <section class="grid md:grid-cols-3 gap-5 w-[95%] mx-auto mb-12">
       {
-        proyectos.map((proyecto, iv) => {
+        proyectos.map((proyecto) => {
           return (
             <>
               <ProyectCard

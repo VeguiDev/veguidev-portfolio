@@ -50,79 +50,50 @@
       "href": "/sobre-mi#habilidades"
     }
   },
-  "projects_site": [
-    {
-      "image": "/proyectos-images/cloth.png",
-      "title": "Farfania Cloth",
-      "description": "El Farfania Cloth es una herramienta que permite a los dise\u00F1adores de Farfania crear ropas e incluirlas en el juego.",
-      "pills": [
-        { "text": "React", "color": "blue" },
-        { "text": "Tailwind", "color": "red" },
-        { "text": "Electron.js", "color": "green" },
-        { "text": "Java", "color": "cyan" }
-      ]
-    },
-    {
-      "image": "/proyectos-images/farfania-landing.png",
-      "title": "Farfania Landing",
-      "description": "La p\u00E1gina oficial de Farfania 2, el pa\u00EDs de Farfadox en Minecraft.",
-      "link": "https://farfania.com/",
-      "pills": [
-        { "text": "Astro.js", "color": "orange" },
-        { "text": "Tailwind", "color": "red" },
-        { "text": "React", "color": "blue" },
-        { "text": "Nest.js", "color": "yellow" }
-      ]
-    },
-    {
-      "image": "/proyectos-images/farfadox-launcher.png",
-      "title": "Farfadox Launcher",
-      "description": "El launcher oficial de Farfadox, que permite acceder a los servidores de Farfadox.",
-      "link": "https://farfania.com/launcher",
-      "pills": [
-        { "text": "React", "color": "blue" },
-        { "text": "Tailwind", "color": "red" },
-        { "text": "Electron.js", "color": "orange" },
-        { "text": "Nest.js", "color": "yellow" }
-      ]
-    },
-    {
-      "image": "/proyectos-images/economy-suite.png",
-      "title": "Economy Suite",
-      "description": "Es la suite de economia de Farfania que permite a los usuarios gestionar sus cuentas de banco, hacer transacciones, etc.",
-      "pills": [
-        { "text": "Java", "color": "cyan" },
-        {
-          "text": "SQL",
-          "color": "blue"
-        }
-      ]
-    },
-    {
-      "image": "/proyectos-images/eyemod-farfania.png",
-      "title": "App Contactos",
-      "description": "La aplicaci\u00F3n de contactos de Farfania, que permite a los usuarios guardar sus contactos.",
-      "pills": [
-        { "text": "Java", "color": "cyan" },
-        {
-          "text": "SQL",
-          "color": "blue"
-        }
-      ]
-    },
-    {
-      "image": "/proyectos-images/wetalk.png",
-      "title": "WeTalk",
-      "description": "La applicaci\u00F3n de mensajer\u00EDa instantanea de Farfania, que permite a los usuarios comunicarse entre ellos.",
-      "pills": [
-        { "text": "Java", "color": "cyan" },
-        {
-          "text": "SQL",
-          "color": "blue"
-        }
-      ]
+   "project": {
+    "meta": {
+      "masivo": {
+        "name": "MasivoSMP",
+        "description": "Un proyecto de Minecraft a gran escala enfocado en gameplay personalizado, rendimiento y contenido original, impulsado por un ecosistema de sistemas, servicios y herramientas desarrolladas a medida."
+      },
+      "vcontext": {
+        "name": "VContext",
+        "description": "Un sistema de gestión de contexto para desarrollo de software y agentes de IA, diseñado para mantener el conocimiento de un proyecto, sus tareas, cambios, snapshots y estado de Git entre distintas sesiones de desarrollo."
+      },
+      "san-pedro": {
+        "name": "Instituto San Pedro",
+        "description": "El sitio web institucional del Instituto San Pedro, diseñado para ofrecer a estudiantes, familias y visitantes una forma moderna y accesible de conocer la institución, su propuesta educativa y sus novedades."
+      },
+      "legado-social": {
+        "name": "Legado Social",
+        "description": "La presencia digital de Legado Social, un emprendimiento de marketing, diseñada para presentar sus servicios, identidad y propuesta de valor a través de una experiencia web moderna."
+      },
+      "farfania-cloth": {
+        "name": "Farfania Cloth",
+        "description": "Una herramienta interna que permite a los diseñadores de Farfania crear, configurar e integrar prendas personalizadas directamente dentro del juego."
+      },
+      "farfania-landing": {
+        "name": "Farfania Landing",
+        "description": "El sitio web oficial de Farfania 2, el país de Farfadox dentro de Minecraft, creado para presentar el proyecto, su identidad, contenido y comunidad."
+      },
+      "farfadox-launcher": {
+        "name": "Farfadox Launcher",
+        "description": "El launcher oficial de Farfadox, desarrollado para simplificar el acceso a sus servidores de Minecraft y ofrecer a los jugadores un punto de entrada propio a todo su ecosistema."
+      },
+      "economy-suite": {
+        "name": "Economy Suite",
+        "description": "La plataforma financiera de Farfania, que permite a los jugadores administrar cuentas bancarias, realizar transferencias, consultar movimientos e interactuar con la economía interna del proyecto."
+      },
+      "contacts-app": {
+        "name": "App Contactos",
+        "description": "La aplicación de gestión de contactos de Farfania, desarrollada para que los usuarios puedan guardar, organizar y administrar sus contactos dentro de la plataforma."
+      },
+      "wetalk": {
+        "name": "WeTalk",
+        "description": "La aplicación de mensajería instantánea de Farfania, diseñada para permitir la comunicación privada entre usuarios y conectarlos dentro del ecosistema del proyecto."
+      }
     }
-  ],
+  },
   "be_interested": "Puede interesarte",
   "abilities": [
     {

@@ -1,14 +1,17 @@
 import { defineConfig } from "astro/config";
-import tailwind from "@astrojs/tailwind";
+import tailwindcss from "@tailwindcss/vite";
 import react from "@astrojs/react";
 import astroI18next from "@veguidev/astro-i18next";
 import i18nextConfig from "./astro-i18next.config.mjs";
 
-import vercel from "@astrojs/vercel/serverless";
+import vercel from "@astrojs/vercel";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [react(), tailwind(), astroI18next(i18nextConfig)],
+  integrations: [react(), astroI18next(i18nextConfig)],
+  vite: {
+    plugins: [tailwindcss()],
+  },
   build: {
     assetsPrefix: "/",
   },
